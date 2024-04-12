@@ -1,0 +1,7 @@
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\Cadastro-Livro.exe.config
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\Cadastro-Livro.exe
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\Cadastro-Livro.pdb
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\obj\Debug\Cadastro-Livro.csproj.AssemblyReference.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\obj\Debug\Cadastro-Livro.csproj.CoreCompileInputs.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\obj\Debug\Cadastro-Livro.exe
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\obj\Debug\Cadastro-Livro.pdb
