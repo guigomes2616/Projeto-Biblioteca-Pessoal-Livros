@@ -13,57 +13,77 @@ namespace Cadastro_Livro
         {
             Console.WriteLine("------------ Cadastro de Livros ------------");
 
-            int opcao;
+            string opcaoUsuario = ObterOpcaoUsuario(); //Chama o metodo opcaoUsuario
 
-            while (true)
+            while (opcaoUsuario.ToUpper() != "X") //Enquanto a opção escolhida for diferente de X
             {
-
-                Console.WriteLine("\nDigite [1] para Cadastrar um Usuario");
-                Console.WriteLine("\nDigite [2] para Cadastrar um Livro");
-                Console.WriteLine("\nDigite [3] para Vizualizar Usuarios");
-                Console.WriteLine("\nDigite [4] para Vizualizar Livros");
-                Console.WriteLine("\nDigite [5] para Vizualizar Livros de Usuarios");
-                Console.WriteLine("\nDigite [6] para Sair");
-                Console.Write("\nInsira a opcao desejada: ");
-                opcao = int.Parse(Console.ReadLine());
-
-                if (opcao < 1 || opcao > 6 )
+                switch (opcaoUsuario) //Varias casos para a opção escolhida
                 {
-                    Console.WriteLine("\nOpcao invalida! Tente novamente");
-                    continue;
-                }
+                    case "1":
+                        //ListarLivro();
+                        Console.WriteLine("\nMetodo listar livro");
+                        break;
 
-                switch (opcao)
-                {
-                    case 1:
-                        Console.WriteLine("\nCase 1 funcionando");
-                        //usuarios.Add(CadastrarUsuario());
+                    case "2":
+                        //InserrLivro();
+                        Console.WriteLine("\nMetodo inserir livro");
                         break;
-                    case 2:
-                        Console.WriteLine("\nCase 2 funcionando"); 
-                        //livros.Add(CadastrarLivro(usuarios));
+
+                    case "3":
+                        //AtualizarLivro();
+                        Console.WriteLine("\nMetodo atualizar livro");
                         break;
-                    case 3:
-                        Console.WriteLine("\nCase 3 funcionando");
-                        //MostrarUsuarios(usuarios);
+
+                    case "4":
+                        //ExcluirLivro();
+                        Console.WriteLine("\nMetodo excluir livro");
                         break;
-                    case 4:
-                        Console.WriteLine("\nCase 4 funcionando");
-                        //MostrarLivros(livros);
+
+                    case "5":
+                        //VizualizarLivro();
+                        Console.WriteLine("\nMetodo vizualizar livro");
                         break;
-                    case 5:
-                        Console.WriteLine("\nCase 5 funcionando");
-                        //VisualizarLivrosDeUsuario(usuarios, livros);
+
+                    case "6":
+                        //CadastrarUsuario();
+                        Console.WriteLine("\nMetodo cadastrar usuario");
                         break;
-                    case 6:
-                        Console.WriteLine("\nSaindo...");
-                        Console.WriteLine("\n");
-                        return;
+
+                    case "7":
+                        //ExcluirUsuario();
+                        Console.WriteLine("\nMetodo excluir usuario");
+                        break;
+
+                    case "C":
+                        Console.Clear();
+                        break;
+
                     default:
-                        Console.WriteLine("Opção inválida. Tente novamente.");
+                        Console.WriteLine("\nOpcao invalida!");
                         break;
                 }
+                opcaoUsuario = ObterOpcaoUsuario(); // Retorna para o menu de opções
             }
+            Console.WriteLine("\nObrigado por usar nosso Programa"); //Caso contrario (X) o programa irá se encerrar
+        }
+
+        public static string ObterOpcaoUsuario() //Método opcaoUsuario para listagem de opções (menu)
+        {
+            Console.Write("\n");
+            Console.WriteLine("Digite [1] para Listar livros");
+            Console.WriteLine("Digite [2] para Inserir novo livro");
+            Console.WriteLine("Digite [3] para Atualizar livro");
+            Console.WriteLine("Digite [4] para Excluir livro");
+            Console.WriteLine("Digite [5] para Visualizar livro");
+            Console.WriteLine("Digite [6] para Cadastrar usuario");
+            Console.WriteLine("Digite [7] para Excluir usuario");
+            Console.WriteLine("Digite [C] para Limpar tela");
+            Console.WriteLine("Digite [X] para Sair");
+            Console.Write("\nInsira a opcao desejada: ");
+
+            string opcaoUsuario = Console.ReadLine().ToUpper();
+
+            return opcaoUsuario;
         }
     }
 }
