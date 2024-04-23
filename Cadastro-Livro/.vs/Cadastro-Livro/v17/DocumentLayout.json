@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\entidadebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\entidadebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:entidadebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\cadastro-livro\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DBE1C2A-7A4C-49EE-AF64-BAD680FDA845}|Cadastro-Livro.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Usuario.cs",
+              "RelativeDocumentMoniker": "Usuario.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Usuario.cs",
+              "RelativeToolTip": "Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:18:20.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Genero.cs",
               "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Genero.cs",
               "RelativeDocumentMoniker": "Genero.cs",
               "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Genero.cs",
               "RelativeToolTip": "Genero.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAUAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-16T13:40:52.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EntidadeBase.cs",
               "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\EntidadeBase.cs",
               "RelativeDocumentMoniker": "EntidadeBase.cs",
@@ -52,15 +73,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "Livro.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Livro.cs",
+              "RelativeDocumentMoniker": "Livro.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Livro.cs",
+              "RelativeToolTip": "Livro.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:08:14.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Cadastro-Livro\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAArAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAwwIAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T00:07:31.765Z",
+              "WhenOpened": "2024-04-23T13:00:29.564Z",
               "EditorCaption": ""
             }
           ]

@@ -4,6 +4,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cadastro_Livro;
 
 namespace Cadastro_Livro
 {
@@ -25,8 +26,7 @@ namespace Cadastro_Livro
                         break;
 
                     case "2":
-                        //InserrLivro();
-                        Console.WriteLine("\nMetodo inserir livro");
+                        CadastrarLivro();
                         break;
 
                     case "3":
@@ -45,8 +45,7 @@ namespace Cadastro_Livro
                         break;
 
                     case "6":
-                        //CadastrarUsuario();
-                        Console.WriteLine("\nMetodo cadastrar usuario");
+                        CadastrarUsuario();
                         break;
 
                     case "7":
@@ -67,6 +66,9 @@ namespace Cadastro_Livro
             Console.WriteLine("\nObrigado por usar nosso Programa"); //Caso contrario (X) o programa irá se encerrar
         }
 
+        // ---------------------------- Metodo Menu de Opções --------------------------------------------------------------
+
+
         public static string ObterOpcaoUsuario() //Método opcaoUsuario para listagem de opções (menu)
         {
             Console.Write("\n");
@@ -84,6 +86,64 @@ namespace Cadastro_Livro
             string opcaoUsuario = Console.ReadLine().ToUpper();
 
             return opcaoUsuario;
+        }
+
+        // ---------------------------- Metodo Cadastrar Usuario --------------------------------------------------------------
+
+        public static Usuario CadastrarUsuario()
+        {
+            Console.Clear();
+            Console.Write("------------ Cadastrar Usuario ------------\n");
+
+            Console.Write("\nDigite o Nome do Usuario: ");
+            string nomeUsu = Console.ReadLine();
+
+            Console.Write("\nDigite a Idade do Usuario: ");
+            int idadeUsu = int.Parse(Console.ReadLine());
+
+            Console.Write("\nDigite o Email do Usuario: ");
+            string emailUsu = Console.ReadLine();
+
+            Console.Write("\nDigite o Telefone do Usuario (11 digitos): ");
+            int telefoneUsu = int.Parse(Console.ReadLine());
+
+            Usuario novoUsuario = new Usuario(nomeUsu, idadeUsu, emailUsu, telefoneUsu);
+
+            return novoUsuario;
+        }
+
+        // ---------------------------- Metodo Cadastrar Livro --------------------------------------------------------------
+
+        public static Livro CadastrarLivro()
+        {
+            Console.Clear();
+            Console.Write("------------ Cadastrar Livro ------------\n");
+
+            foreach (int i in Enum.GetValues(typeof(Genero)))
+            {
+                Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i));
+            }
+
+            Console.WriteLine("\n");
+
+            Console.Write("Digite o Genero do livro entre as opcoes acima: ");
+            int generoLiv = int.Parse(Console.ReadLine());
+
+            Console.Write("\nDigite o Titulo do Livro: ");
+            string titLiv = Console.ReadLine();
+
+            Console.Write("\nDigite o Autor do Livro: ");
+            string autorLiv = Console.ReadLine();
+
+            Console.Write("\nDigite o Ano de lançamento do Livro ");
+            int anoLiv = int.Parse(Console.ReadLine());
+
+            Console.Write("\nInsira uma breve Descricao do Livro: ");
+            string descLiv = Console.ReadLine();
+
+            Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv, descLiv);
+
+            return novoLivro;
         }
     }
 }
