@@ -1,4 +1,4 @@
-# Projeto-DS
+# Projeto-DS - Grupo: 04
 #Autores: Guilherme Gomes e Deborah Oliverira
 
 Repositório para o Projeto de Desenvolvimento de Sistemas, formulario de biblioteca pessoal em C#
