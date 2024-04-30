@@ -6,24 +6,20 @@ using System.Threading.Tasks;
 
 namespace Cadastro_Livro
 {
-    public class Livro //:EntidadeBase
+    public class Livro
     {
         public Genero Genero { get; set; }
         public string Titulo { get; set; }
         public string Autor {  get; set; }
-        public int Ano { get; set; }
-        public string Descricao { get; set;}
-        public bool Excluido { get; set; }
+        public int AnoPubli { get; set; }
 
-        public Livro(Genero gen, string tit, string aut, int ano, string desc)
+        public Livro(Genero gen, string tit, string aut, int anop)
         {
 
             this.Genero = gen;
             this.Titulo = tit;
             this.Autor = aut;
-            this.Ano = ano;
-            this.Descricao = desc;
-            this.Excluido = false;
+            this.AnoPubli = anop;
         }
     }
 }

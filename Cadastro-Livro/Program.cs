@@ -29,34 +29,6 @@ namespace Cadastro_Livro
                         CadastrarLivro();
                         break;
 
-                    case "3":
-                        //AtualizarLivro();
-                        Console.WriteLine("\nMetodo atualizar livro");
-                        break;
-
-                    case "4":
-                        //ExcluirLivro();
-                        Console.WriteLine("\nMetodo excluir livro");
-                        break;
-
-                    case "5":
-                        //VizualizarLivro();
-                        Console.WriteLine("\nMetodo vizualizar livro");
-                        break;
-
-                    case "6":
-                        CadastrarUsuario();
-                        break;
-
-                    case "7":
-                        //ExcluirUsuario();
-                        Console.WriteLine("\nMetodo excluir usuario");
-                        break;
-
-                    case "C":
-                        Console.Clear();
-                        break;
-
                     default:
                         Console.WriteLine("\nOpcao invalida!");
                         break;
@@ -68,48 +40,18 @@ namespace Cadastro_Livro
 
         // ---------------------------- Metodo Menu de Opções --------------------------------------------------------------
 
-
         public static string ObterOpcaoUsuario() //Método opcaoUsuario para listagem de opções (menu)
         {
             Console.Write("\n");
             Console.WriteLine("Digite [1] para Listar livros");
             Console.WriteLine("Digite [2] para Inserir novo livro");
             Console.WriteLine("Digite [3] para Atualizar livro");
-            Console.WriteLine("Digite [4] para Excluir livro");
-            Console.WriteLine("Digite [5] para Visualizar livro");
-            Console.WriteLine("Digite [6] para Cadastrar usuario");
-            Console.WriteLine("Digite [7] para Excluir usuario");
-            Console.WriteLine("Digite [C] para Limpar tela");
             Console.WriteLine("Digite [X] para Sair");
             Console.Write("\nInsira a opcao desejada: ");
 
             string opcaoUsuario = Console.ReadLine().ToUpper();
 
             return opcaoUsuario;
-        }
-
-        // ---------------------------- Metodo Cadastrar Usuario --------------------------------------------------------------
-
-        public static Usuario CadastrarUsuario()
-        {
-            Console.Clear();
-            Console.Write("------------ Cadastrar Usuario ------------\n");
-
-            Console.Write("\nDigite o Nome do Usuario: ");
-            string nomeUsu = Console.ReadLine();
-
-            Console.Write("\nDigite a Idade do Usuario: ");
-            int idadeUsu = int.Parse(Console.ReadLine());
-
-            Console.Write("\nDigite o Email do Usuario: ");
-            string emailUsu = Console.ReadLine();
-
-            Console.Write("\nDigite o Telefone do Usuario (11 digitos): ");
-            int telefoneUsu = int.Parse(Console.ReadLine());
-
-            Usuario novoUsuario = new Usuario(nomeUsu, idadeUsu, emailUsu, telefoneUsu);
-
-            return novoUsuario;
         }
 
         // ---------------------------- Metodo Cadastrar Livro --------------------------------------------------------------
@@ -119,15 +61,26 @@ namespace Cadastro_Livro
             Console.Clear();
             Console.Write("------------ Cadastrar Livro ------------\n");
 
-            foreach (int i in Enum.GetValues(typeof(Genero)))
+            foreach (int i in Enum.GetValues(typeof(Genero))) //i vai percorrer os valores de Enum da classe Genero
             {
-                Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i));
+                Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i)); //Vai imprimir cada valor {0} e seu nome {1}
             }
 
-            Console.WriteLine("\n");
+            Console.WriteLine("\n"); //Pula linha
 
             Console.Write("Digite o Genero do livro entre as opcoes acima: ");
             int generoLiv = int.Parse(Console.ReadLine());
+
+           while (generoLiv <= 0 || generoLiv > 13){ //Enquanto generoLiv for menor ou igual a 0 OU maior que 13
+                Console.Write("\nOperacao invalida, tente novamente!\n");
+
+                Console.Write("\nDigite o Genero do livro entre as opcoes acima: ");
+                generoLiv = int.Parse(Console.ReadLine());
+            }
+
+            Console.Clear(); //Limpa a tela
+
+            Console.Write("------------ Cadastrar Livro ------------\n");
 
             Console.Write("\nDigite o Titulo do Livro: ");
             string titLiv = Console.ReadLine();
@@ -135,15 +88,24 @@ namespace Cadastro_Livro
             Console.Write("\nDigite o Autor do Livro: ");
             string autorLiv = Console.ReadLine();
 
-            Console.Write("\nDigite o Ano de lançamento do Livro ");
-            int anoLiv = int.Parse(Console.ReadLine());
+            Console.Write("\nDigite o Ano de lançamento do Livro: ");
+            int anoLiv = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("\nInsira uma breve Descricao do Livro: ");
-            string descLiv = Console.ReadLine();
+            int anoAtual = DateTime.Now.Year; //Variavel que busca o ano atual do sistema
 
-            Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv, descLiv);
+            while (anoLiv > anoAtual) //Enquanto anoLiv for maior que ano Atual
+            {
+                Console.Write("\nAno de publicacao invalido, tente novamente! \n");
 
-            return novoLivro;
+                Console.Write("\nDigite o Ano de lançamento do Livro ");
+                anoLiv = int.Parse(Console.ReadLine());
+            }
+
+            Console.Write("\n---------- Livro Cadastrado com Sucesso! ---------- \n");
+
+            Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv); //Cria um novo Objeto "novo Livro" com os parametros passados - corresponde ao metodo da classe Livro
+
+            return novoLivro; //Retorna "novoLivro"
         }
     }
 }
