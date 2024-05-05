@@ -4,21 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cadastro_Livro
+namespace Cadastro_Livro // Define o namespace Cadastro_Livro
 {
-    internal class Usuario
+    internal class Usuario // Define a classe interna Usuario
     {
-        public string Nome {  get; set; }
-        public int Idade { get; set; }
-        public string Email { get; set; }
-        public int Telefone { get; set; }
+        // Declaração de propriedades da classe Usuario
+        public string Nome { get; set; } // Propriedade para armazenar o nome do usuário
+        public string DataNascimento { get; set; } // Propriedade para armazenar a data de nascimento do usuário
+        public string Email { get; set; } // Propriedade para armazenar o email do usuário
+        public string Nickname { get; set; } // Propriedade para armazenar o apelido do usuário
+        public string Senha { get; set; } // Propriedade para armazenar a senha do usuário
 
-        public Usuario(string n, int idad, string em, int tel)
+        // Construtor da classe Usuario que recebe parâmetros para inicializar as propriedades
+        public Usuario(string n, string dataNas, string em, string user, string sen)
         {
-            this.Nome = n;
-            this.Idade = idad;
-            this.Email = em;
-            this.Telefone = tel;
+            // Inicializa as propriedades com os valores dos parâmetros recebidos
+            this.Nome = n; // Define o nome do usuário
+            this.DataNascimento = dataNas; // Define a data de nascimento do usuário
+            this.Email = em; // Define o email do usuário
+            this.Nickname = user; // Define o apelido do usuário
+            this.Senha = sen; // Define a senha do usuário
         }
     }
 }
+
