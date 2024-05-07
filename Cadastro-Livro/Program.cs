@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data;
 
 namespace Cadastro_Livro
 {
@@ -47,7 +48,7 @@ namespace Cadastro_Livro
             Console.WriteLine("\nObrigado por usar nosso Programa\n"); //Caso contrario (X) o programa irá se encerrar
             Console.Clear(); // Limpa a tela
 
-            RealizarLogin(); // Chamada ao método de login novamente
+           RealizarLogin(); // Chamada ao método de login novamente
         }
 
         // ---------------------------- Metodo Login --------------------------------------------------------------
@@ -68,22 +69,15 @@ namespace Cadastro_Livro
                 {
                     case "1":
                         CadastrarUsuario(); // Chama o método para cadastrar um novo usuário
-
                         return RealizarLogin(); // Realiza o login novamente após o cadastro
 
                     case "2":
-                        if (VerificarLogin()) // Verifica se o login é válido
-                        {
-                            return true; // Retorna verdadeiro se o login for válido
-                        }
-                        else
-                        {
-                            return false; // Retorna falso se o login não for válido
-                        }
+                        VerificarLogin();
+                        continue;
 
                     default:
                         Console.Write("\nOpcao invalida!");
-                        return false; // Retorna falso para opções inválidas
+                        break;
                 }
             }
         }
@@ -94,7 +88,6 @@ namespace Cadastro_Livro
         {
             Console.WriteLine("\nDigite [1] para Listar livros");
             Console.WriteLine("Digite [2] para Inserir novo livro");
-            Console.WriteLine("Digite [3] para Atualizar livro");
             Console.WriteLine("Digite [X] para Sair");
             Console.Write("\nInsira a opcao desejada: ");
 
@@ -198,7 +191,7 @@ namespace Cadastro_Livro
             return novoLivro; // Retorna o novo livro cadastrado
         }
 
-        public static bool VerificarLogin() // Método para verificar o login
+        public static Login VerificarLogin() // Método para verificar o login
         {
             Console.Clear(); // Limpa a tela
             Console.Write("------------ Login ------------\n");
@@ -216,9 +209,10 @@ namespace Cadastro_Livro
             while (emailLogin != emailEntrada && senhaLogin != senhaEntrada) // Verifica se o login é válido
             {
                 Console.WriteLine("Falha no login, tente novamente!");
-                return false;
             }
-            return true; // Retorna verdadeiro se o login for bem-sucedido
+
+            Login novoLogin = new Login(emailEntrada, senhaEntrada);
+            return novoLogin;
         }
     }
 }
