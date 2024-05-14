@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using MySql.Data;
 
@@ -10,101 +11,120 @@ namespace Cadastro_Livro
 {
     internal class Program
     {
+        static List<Livro> livros = new List<Livro>();
+        static List<Usuario> usuarios = new List<Usuario>();
+
         static void Main(string[] args)
         {
-            // ---------------------------- Teste de Login --------------------------------------------------------
+            RealizarLogin();
 
-            while (!RealizarLogin())
+            string opcaoUsuario = ObterOpcaoUsuario();
+
+            while (opcaoUsuario.ToUpper() != "X")
             {
-                Console.WriteLine("\n");
-            }
-
-            Console.Clear(); // Limpa a tela
-
-            Console.WriteLine("------------ Cadastro de Livros ------------ ");
-
-            string opcaoUsuario = ObterOpcaoUsuario(); //Chama o metodo opcaoUsuario
-
-            while (opcaoUsuario.ToUpper() != "X") //Enquanto a opção escolhida for diferente de X
-            {
-                switch (opcaoUsuario) //Varias casos para a opção escolhida
+                switch (opcaoUsuario)
                 {
                     case "1":
-                        //ListarLivro();
-                        Console.WriteLine("\nMetodo listar livro");
+                        ListarLivros();
                         break;
-
                     case "2":
                         CadastrarLivro();
                         break;
-
                     default:
-                        Console.WriteLine("\nOpcao invalida!");
+                        Console.Write("\nOpção inválida! tente novamente: \n");
+                        opcaoUsuario = Console.ReadLine();
                         break;
                 }
-                opcaoUsuario = ObterOpcaoUsuario(); // Retorna para o menu de opções
+                opcaoUsuario = ObterOpcaoUsuario();
             }
+            SairPrograma();
 
-            Console.WriteLine("\nObrigado por usar nosso Programa\n"); //Caso contrario (X) o programa irá se encerrar
-            Console.Clear(); // Limpa a tela
-
-           RealizarLogin(); // Chamada ao método de login novamente
+            RealizarLogin();
         }
-
-        // ---------------------------- Metodo Login --------------------------------------------------------------
-
-        public static bool RealizarLogin()
+//----------------------------------------------------------------------------------------------------------------------------------
+        public static void RealizarLogin()
         {
-            Console.WriteLine("------------ Faça Login para acessar o Programa de Cadastro de Livro ------------");
+            Console.WriteLine("------------ Faça Login para acessar o Programa de Cadastro de Livro ------------\n");
 
-            Console.Write("\nDigite [1] para se Cadastrar");
-            Console.Write("\nDigite [2] para Entrar no programa\n");
+            Console.Write("Digite [1] para se Cadastrar\n");
+            Console.Write("Digite [2] para Entrar no programa\n");
+            Console.Write("Digite [X] para Sair do programa \n");
+
             Console.Write("\nInsira a opção desejada: ");
 
             string opcaoLogin = Console.ReadLine().ToUpper();
 
-            while (true) // Loop infinito até o login ser bem-sucedido ou inválido
+            switch (opcaoLogin)
             {
-                switch (opcaoLogin) // Verifica a opção de login
-                {
-                    case "1":
-                        CadastrarUsuario(); // Chama o método para cadastrar um novo usuário
-                        return RealizarLogin(); // Realiza o login novamente após o cadastro
+                case "1":
+                    CadastrarUsuario();
+                    RealizarLogin();
+                    break;
 
-                    case "2":
-                        VerificarLogin();
-                        continue;
+                case "2":
+                    bool loginSucesso = false;
 
-                    default:
-                        Console.Write("\nOpcao invalida!");
+                    while (!loginSucesso)
+                    {
+                        if (VerificarLogin() != null)
+                        {
+                            loginSucesso = true;
+                        }
+                        else
+                        {
+                            Console.Write("\nFalha no Login, deseja continuar?(S/N): \n");
+                            string resLogin = Console.ReadLine();
+
+                            if (resLogin.ToUpper() == "S")
+                            {
+                                VerificarLogin();
+                            }
+                            else if (resLogin.ToUpper() == "N")
+                            {
+                                RealizarLogin();
+                            }
+                        }
+                    }
+                    break;
+
+                case "X":
+                    loginSucesso = false;
+                    SairPrograma();
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    while (opcaoLogin != "X" && opcaoLogin != "1" && opcaoLogin != "2")
+                    {
+                        Console.Write("\nOpcao invalida! tente novamente: ");
+                        opcaoLogin = Console.ReadLine();
+                    }
+                        RealizarLogin();
                         break;
                 }
-            }
         }
-
-        // ---------------------------- Metodo Menu de Opções --------------------------------------------------------------
-
-        public static string ObterOpcaoUsuario() //Método opcaoUsuario para listagem de opções (menu)
+// -------------------------------------------------------------------------------------------------------------------------------
+        public static string ObterOpcaoUsuario()
         {
+            Console.Write("------------ Menu de Opcoes ------------\n");
+
             Console.WriteLine("\nDigite [1] para Listar livros");
             Console.WriteLine("Digite [2] para Inserir novo livro");
             Console.WriteLine("Digite [X] para Sair");
             Console.Write("\nInsira a opcao desejada: ");
 
+            Console.WriteLine();
+
             string opcaoUsuario = Console.ReadLine().ToUpper();
 
-            return opcaoUsuario; // Retorna a opção do usuário
+            return opcaoUsuario;
         }
-
-        // ---------------------------- Metodo Cadastrar Usuario --------------------------------------------------------------
-
-        public static Usuario CadastrarUsuario() // Método para cadastrar um novo usuário
+// -------------------------------------------------------------------------------------------------------------------------------
+        public static Usuario CadastrarUsuario()
         {
-            Console.Clear(); // Limpa a tela
-
+            Console.Clear();
             Console.Write("------------ Cadastro de Usuario ------------\n");
 
-            // Solicita informações do usuário
             Console.Write("\nDigite o seu Nome completo: ");
             string nomeUser = Console.ReadLine();
 
@@ -120,30 +140,41 @@ namespace Cadastro_Livro
             Console.Write("\nCrie uma Senha: ");
             string senhaUser = Console.ReadLine();
 
-            // Cria um novo objeto de usuário com as informações fornecidas
             Usuario novoUsuario = new Usuario(nomeUser, datanascimentoUser, emailUser, nickUser, senhaUser);
+            usuarios.Add(novoUsuario);
 
-            return novoUsuario; // Retorna o novo usuário criado
+            Console.WriteLine();
+
+            return novoUsuario;
         }
-
-        // ---------------------------- Metodo Listar Livro ----------------------------------------------------------------
-
-        public static void ListarLivros() // Método para listar os livros cadastrados
+ //----------------------------------------------------------------------------------------------------------------------------
+        public static void ListarLivros()
         {
-            Console.Clear(); // Limpa a tela
-            Console.Write("------------ Listagem de Livros Cadastrados ------------\n");
-        }
+            Console.WriteLine("---------- Lista de seus Livros ---------- \n");
 
-        // ---------------------------- Metodo Cadastrar Livro --------------------------------------------------------------
-
-        public static Livro CadastrarLivro() // Método para cadastrar um novo livro
-        {
-            Console.Clear(); // Limpa a tela
-            Console.Write("------------ Cadastrar Livro ------------\n");
-
-            foreach (int i in Enum.GetValues(typeof(Genero))) // Itera sobre os valores do enum Genero
+            if (livros.Count == 0)
             {
-                Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i)); // Exibe cada valor do enum
+                Console.WriteLine("\nNenhum livro cadastrado \n");
+            }
+            else
+            {
+                foreach (var livro in livros)
+                {
+                    Console.WriteLine($"Titulo: {livro.Titulo} | Autor: {livro.Autor} | Ano de Publicação: {livro.AnoPubli} | Gênero: {livro.Genero}");
+                }
+            }
+
+            Console.WriteLine();
+        }
+ // --------------------------------------------------------------------------------------------------------------------------------
+        public static Livro CadastrarLivro()
+        {
+            Console.Clear();
+            Console.Write("------------ Cadastrar Livro - Genero ------------\n");
+
+            foreach (int i in Enum.GetValues(typeof(Genero)))
+            {
+                Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i));
             }
 
             Console.WriteLine("\n"); // Pula linha
@@ -151,7 +182,7 @@ namespace Cadastro_Livro
             Console.Write("Digite o Genero do livro entre as opcoes acima: ");
             int generoLiv = int.Parse(Console.ReadLine());
 
-            while (generoLiv <= 0 || generoLiv > 13) // Verifica se o gênero do livro é válido
+            while (generoLiv <= 0 || generoLiv > 13)
             {
                 Console.Write("\nOperacao invalida, tente novamente!\n");
 
@@ -159,11 +190,8 @@ namespace Cadastro_Livro
                 generoLiv = int.Parse(Console.ReadLine());
             }
 
-            Console.Clear(); // Limpa a tela
+            Console.Write("\n------------ Cadastrar Livro - Informacoes ------------\n");
 
-            Console.Write("------------ Cadastrar Livro ------------\n");
-
-            // Solicita informações do livro
             Console.Write("\nDigite o Titulo do Livro: ");
             string titLiv = Console.ReadLine();
 
@@ -173,9 +201,9 @@ namespace Cadastro_Livro
             Console.Write("\nDigite o Ano de lançamento do Livro: ");
             int anoLiv = Convert.ToInt32(Console.ReadLine());
 
-            int anoAtual = DateTime.Now.Year; // Obtém o ano atual do sistema
+            int anoAtual = DateTime.Now.Year;
 
-            while (anoLiv > anoAtual) // Verifica se o ano de lançamento é válido
+            while (anoLiv > anoAtual)
             {
                 Console.Write("\nAno de publicacao invalido, tente novamente! \n");
 
@@ -183,36 +211,45 @@ namespace Cadastro_Livro
                 anoLiv = int.Parse(Console.ReadLine());
             }
 
-            // Cria um novo objeto Livro com as informações fornecidas
             Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv);
+            livros.Add(novoLivro);
 
             Console.Write("\n---------- Livro Cadastrado com Sucesso! ---------- \n");
 
-            return novoLivro; // Retorna o novo livro cadastrado
+            return novoLivro;
         }
+
+//---------------------------------------------------------------------------------------------------------------------------------------
 
         public static Login VerificarLogin() // Método para verificar o login
         {
-            Console.Clear(); // Limpa a tela
+            Console.Clear();
             Console.Write("------------ Login ------------\n");
 
-            // Solicita o email e a senha para login
             Console.Write("\nDigite o seu Email: ");
             string emailLogin = Console.ReadLine();
 
             Console.Write("Digite a sua Senha: ");
             string senhaLogin = Console.ReadLine();
 
-            string emailEntrada = emailLogin;
-            string senhaEntrada = senhaLogin;
+            Usuario usuario = usuarios.FirstOrDefault(u => u.useremail == emailLogin);
 
-            while (emailLogin != emailEntrada && senhaLogin != senhaEntrada) // Verifica se o login é válido
+            if (usuario != null && usuario.password == senhaLogin)
             {
-                Console.WriteLine("Falha no login, tente novamente!");
+                return usuario;
             }
+            else
+            {
+                return null;
+            }
+        }
 
-            Login novoLogin = new Login(emailEntrada, senhaEntrada);
-            return novoLogin;
+        public static bool SairPrograma()
+        {
+            Console.WriteLine("\nObrigado por utilizar o nosso Programa! \nSaindo do programa...\n");
+            Thread.Sleep(3000);
+
+            return false;
         }
     }
 }

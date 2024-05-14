@@ -11,7 +11,6 @@ C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\K4
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\MySql.Data.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\System.Buffers.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Cadastro-Livro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
