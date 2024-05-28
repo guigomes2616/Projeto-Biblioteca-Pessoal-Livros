@@ -1,6 +1,6 @@
 ﻿    using System;
     using System.Collections.Generic;
-    using System.Linq;
+using System.Linq;
     using System.Security.Cryptography.X509Certificates;
     using System.Text;
     using System.Threading;
@@ -12,13 +12,13 @@
     {
         internal class Program
         {
-            static List<Livro> livros = new List<Livro>();
-            static List<Usuario> usuarios = new List<Usuario>();
             static MySqlConnection connection;
 
         static void Main(string[] args)
             {
-                RealizarLogin();
+            connection = GetConnection();
+            connection.Open();
+            RealizarLogin();
 
                 string opcaoUsuario = ObterOpcaoUsuario();
 
@@ -32,7 +32,12 @@
                         case "2":
                             CadastrarLivro();
                             break;
-                        default:
+                    case "X":
+                        SairPrograma();
+                        Environment.Exit(0);
+                        break;
+
+                    default:
                             Console.Write("\nOpção inválida! tente novamente: \n");
                             opcaoUsuario = Console.ReadLine();
                             break;
@@ -152,10 +157,7 @@
                 Console.Write("\nCrie uma Senha: ");
                 string senhaUser = Console.ReadLine();
 
-                Usuario novoUsuario = new Usuario(nomeUser, datanascimentoUser, emailUser, nickUser, senhaUser);
-                usuarios.Add(novoUsuario);
-
-                Console.WriteLine();
+                Usuario novoUsuario = new Usuario(nomeUser, datanascimentoUser, emailUser, nickUser, senhaUser);    
 
                 using (MySqlConnection connection = GetConnection())
                 {
@@ -180,6 +182,9 @@
             {
                 try
                 {
+                    connection.Open();
+                    Console.WriteLine("Conexão aberta com sucesso.");
+
                     string query = "SELECT * FROM livro";
                     MySqlCommand command = new MySqlCommand(query, connection);
                     MySqlDataReader reader = command.ExecuteReader();
@@ -252,7 +257,6 @@
                 }
 
                 Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv);
-                livros.Add(novoLivro);
 
                 Console.Write("\n---------- Livro Cadastrado com Sucesso! ---------- \n");
 
@@ -279,32 +283,71 @@
                 return novoLivro;
             }
 
-    //---------------------------------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------------------------
 
-            public static Login VerificarLogin() // Método para verificar o login
+        public static Login VerificarLogin() // Método para verificar o login
+        {
+            Console.Clear();
+            Console.Write("------------ Login ------------\n");
+
+            Console.Write("\nDigite o seu Email: ");
+            string emailLogin = Console.ReadLine();
+
+            Console.Write("Digite a sua Senha: ");
+            string senhaLogin = Console.ReadLine();
+
+            try
             {
-                Console.Clear();
-                Console.Write("------------ Login ------------\n");
-
-                Console.Write("\nDigite o seu Email: ");
-                string emailLogin = Console.ReadLine();
-
-                Console.Write("Digite a sua Senha: ");
-                string senhaLogin = Console.ReadLine();
-
-                Usuario usuario = usuarios.FirstOrDefault(u => u.useremail == emailLogin);
-
-                if (usuario != null && usuario.password == senhaLogin)
+                using (MySqlConnection connection = GetConnection())
                 {
-                    return usuario;
-                }
-                else
-                {
-                    return null;
+                    connection.Open();
+                    string query = "SELECT * FROM usuario WHERE email_usuario = @Email AND senha = @Senha";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Email", emailLogin);
+                    command.Parameters.AddWithValue("@Senha", senhaLogin);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Usuário encontrado
+                            string nomeUsuario = reader.GetString("nome_usuario");
+                            string dataNascimentoStr = reader.GetString("data_nascimento");
+                            DateTime? dataNascimento = null;
+                            if (!string.IsNullOrEmpty(dataNascimentoStr))
+                            {
+                                if (DateTime.TryParseExact(dataNascimentoStr, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+                                {
+                                    dataNascimento = parsedDate;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Erro ao converter data de nascimento.");
+                                }
+                            }
+                            string emailUsuario = reader.GetString("email_usuario");
+                            string nickName = reader.GetString("nick_name");
+                            string senhaUsuario = reader.GetString("senha");
+
+                            return new Usuario(nomeUsuario, dataNascimento?.ToString("yyyy-MM-dd"), emailUsuario, nickName, senhaUsuario);
+                        }
+                        else
+                        {
+                            // Usuário não encontrado
+                            Console.WriteLine("Email ou senha incorretos.");
+                            return null;
+                        }
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao verificar login: {ex.Message}");
+                return null;
+            }
+        }
 
-            public static bool SairPrograma()
+        public static bool SairPrograma()
             {
                 Console.WriteLine("\nObrigado por utilizar o nosso Programa! \nSaindo do programa...\n");
                 Thread.Sleep(3000);
