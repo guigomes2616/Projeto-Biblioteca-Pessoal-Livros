@@ -193,7 +193,7 @@ using System.Linq;
                     {
                         while (reader.Read())
                         {
-                            Console.WriteLine($"Título: {reader.GetString("nome_livro")} | Autor: {reader.GetString("autor_livro")} | Ano de Publicação: {reader.GetInt32("ano_publicacao")} | Gênero: {reader.GetString("genero_livro")}");
+                            Console.WriteLine($"Título: {reader.GetString("nome_livro")} | Autor: {reader.GetString("autor_livro")} | Ano de Publicação: {reader.GetInt32("ano_publicacao")} | Gênero: {reader.GetInt32("genero_livro")}");
                         }
                     }
                     else
@@ -314,17 +314,6 @@ using System.Linq;
                             string nomeUsuario = reader.GetString("nome_usuario");
                             string dataNascimentoStr = reader.GetString("data_nascimento");
                             DateTime? dataNascimento = null;
-                            if (!string.IsNullOrEmpty(dataNascimentoStr))
-                            {
-                                if (DateTime.TryParseExact(dataNascimentoStr, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
-                                {
-                                    dataNascimento = parsedDate;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Erro ao converter data de nascimento.");
-                                }
-                            }
                             string emailUsuario = reader.GetString("email_usuario");
                             string nickName = reader.GetString("nick_name");
                             string senhaUsuario = reader.GetString("senha");
