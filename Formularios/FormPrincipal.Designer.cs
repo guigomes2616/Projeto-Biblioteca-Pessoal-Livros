@@ -28,68 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btn_Listar = new System.Windows.Forms.Button();
+            this.btn_CadLivro = new System.Windows.Forms.Button();
+            this.btn_Sair = new System.Windows.Forms.Button();
+            this.lab_Listar = new System.Windows.Forms.Label();
+            this.lab_CadLivro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Listar
             // 
-            this.button1.Location = new System.Drawing.Point(86, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Listar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Listar.Location = new System.Drawing.Point(86, 67);
+            this.btn_Listar.Name = "btn_Listar";
+            this.btn_Listar.Size = new System.Drawing.Size(63, 25);
+            this.btn_Listar.TabIndex = 0;
+            this.btn_Listar.Text = "Listar";
+            this.btn_Listar.UseVisualStyleBackColor = true;
+            this.btn_Listar.Click += new System.EventHandler(this.btn_Listar_Click);
             // 
-            // button2
+            // btn_CadLivro
             // 
-            this.button2.Location = new System.Drawing.Point(255, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(63, 25);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_CadLivro.Location = new System.Drawing.Point(255, 67);
+            this.btn_CadLivro.Name = "btn_CadLivro";
+            this.btn_CadLivro.Size = new System.Drawing.Size(63, 25);
+            this.btn_CadLivro.TabIndex = 1;
+            this.btn_CadLivro.Text = "Cadastrar";
+            this.btn_CadLivro.UseVisualStyleBackColor = true;
+            this.btn_CadLivro.Click += new System.EventHandler(this.btn_CadLivro_Click);
             // 
-            // button3
+            // btn_Sair
             // 
-            this.button3.Location = new System.Drawing.Point(24, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(294, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sair";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Sair.Location = new System.Drawing.Point(24, 151);
+            this.btn_Sair.Name = "btn_Sair";
+            this.btn_Sair.Size = new System.Drawing.Size(294, 23);
+            this.btn_Sair.TabIndex = 2;
+            this.btn_Sair.Text = "Sair";
+            this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
-            // label1
+            // lab_Listar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Listar livos:";
+            this.lab_Listar.AutoSize = true;
+            this.lab_Listar.Location = new System.Drawing.Point(21, 73);
+            this.lab_Listar.Name = "lab_Listar";
+            this.lab_Listar.Size = new System.Drawing.Size(59, 13);
+            this.lab_Listar.TabIndex = 3;
+            this.lab_Listar.Text = "Listar livos:";
             // 
-            // label2
+            // lab_CadLivro
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Cadastrar livro:";
+            this.lab_CadLivro.AutoSize = true;
+            this.lab_CadLivro.Location = new System.Drawing.Point(172, 73);
+            this.lab_CadLivro.Name = "lab_CadLivro";
+            this.lab_CadLivro.Size = new System.Drawing.Size(77, 13);
+            this.lab_CadLivro.TabIndex = 4;
+            this.lab_CadLivro.Text = "Cadastrar livro:";
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 186);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lab_CadLivro);
+            this.Controls.Add(this.lab_Listar);
+            this.Controls.Add(this.btn_Sair);
+            this.Controls.Add(this.btn_CadLivro);
+            this.Controls.Add(this.btn_Listar);
             this.Name = "FormPrincipal";
             this.Text = "Menu Principal";
             this.ResumeLayout(false);
@@ -99,10 +102,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Listar;
+        private System.Windows.Forms.Button btn_CadLivro;
+        private System.Windows.Forms.Button btn_Sair;
+        private System.Windows.Forms.Label lab_Listar;
+        private System.Windows.Forms.Label lab_CadLivro;
     }
 }

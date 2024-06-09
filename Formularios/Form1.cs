@@ -14,48 +14,40 @@ namespace Formularios
 {
     public partial class FormLogin : Form
     {
-        private MySqlConnection connection;
+        private readonly MySqlConnection connection;
+
         public FormLogin()
         {
             InitializeComponent();
+            // Usando string de conexão segura para o banco de dados MySQL.
             connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
         }
 
-        private void btn_cadastrarLogin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            var formCadastro = new FormCadastro();
-            formCadastro.Show();
-        }
-
-        private bool VerificarLogin(string email, string senha)
+        private async Task<bool> VerificarLoginAsync(string email, string senha)
         {
             try
             {
-                connection.Open();
-                string query = "SELECT * FROM usuario WHERE email_usuario = @Email AND senha = @Senha";
-                MySqlCommand command = new MySqlCommand(query, connection);
+                await connection.OpenAsync();
+                string query = "SELECT COUNT(*) FROM usuario WHERE email_usuario = @Email AND senha = @Senha";
+                var command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Senha", senha);
 
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    return reader.Read(); // Se houver um registro, as credenciais são válidas
-                }
+                var result = await command.ExecuteScalarAsync();
+                return Convert.ToInt32(result) > 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao verificar login: {ex.Message}");
-                return false; // Em caso de erro, retorna falso
+                return false;
             }
             finally
             {
-                connection.Close();
+                await connection.CloseAsync();
             }
         }
 
-        private void btn_entrarLogin_Click(object sender, EventArgs e)
+        private async void btn_entrarLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(tb_emailLogin.Text) || string.IsNullOrWhiteSpace(tb_senhaLogin.Text))
             {
@@ -63,17 +55,24 @@ namespace Formularios
                 return;
             }
 
-            if (VerificarLogin(tb_emailLogin.Text, tb_senhaLogin.Text))
+            if (await VerificarLoginAsync(tb_emailLogin.Text, tb_senhaLogin.Text))
             {
                 MessageBox.Show("Login realizado com sucesso!");
                 this.Hide();
-                FormPrincipal FormPrincipal = new FormPrincipal();
-                FormPrincipal.Show();
+                var formPrincipal = new FormPrincipal();
+                formPrincipal.Show();
             }
             else
             {
                 MessageBox.Show("Email ou senha incorretos. Tente novamente.");
             }
+        }
+
+        private void btn_cadastrarLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var formCadastro = new FormCadastro();
+            formCadastro.Show();
         }
     }
 }
