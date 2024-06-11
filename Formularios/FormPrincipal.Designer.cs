@@ -37,9 +37,12 @@
             // 
             // btn_Listar
             // 
-            this.btn_Listar.Location = new System.Drawing.Point(86, 67);
+            this.btn_Listar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Listar.ForeColor = System.Drawing.Color.Purple;
+            this.btn_Listar.Location = new System.Drawing.Point(115, 82);
+            this.btn_Listar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Listar.Name = "btn_Listar";
-            this.btn_Listar.Size = new System.Drawing.Size(63, 25);
+            this.btn_Listar.Size = new System.Drawing.Size(84, 31);
             this.btn_Listar.TabIndex = 0;
             this.btn_Listar.Text = "Listar";
             this.btn_Listar.UseVisualStyleBackColor = true;
@@ -47,9 +50,12 @@
             // 
             // btn_CadLivro
             // 
-            this.btn_CadLivro.Location = new System.Drawing.Point(255, 67);
+            this.btn_CadLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CadLivro.ForeColor = System.Drawing.Color.Purple;
+            this.btn_CadLivro.Location = new System.Drawing.Point(340, 82);
+            this.btn_CadLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_CadLivro.Name = "btn_CadLivro";
-            this.btn_CadLivro.Size = new System.Drawing.Size(63, 25);
+            this.btn_CadLivro.Size = new System.Drawing.Size(84, 31);
             this.btn_CadLivro.TabIndex = 1;
             this.btn_CadLivro.Text = "Cadastrar";
             this.btn_CadLivro.UseVisualStyleBackColor = true;
@@ -57,9 +63,12 @@
             // 
             // btn_Sair
             // 
-            this.btn_Sair.Location = new System.Drawing.Point(24, 151);
+            this.btn_Sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sair.ForeColor = System.Drawing.Color.Purple;
+            this.btn_Sair.Location = new System.Drawing.Point(32, 186);
+            this.btn_Sair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(294, 23);
+            this.btn_Sair.Size = new System.Drawing.Size(392, 28);
             this.btn_Sair.TabIndex = 2;
             this.btn_Sair.Text = "Sair";
             this.btn_Sair.UseVisualStyleBackColor = true;
@@ -68,31 +77,37 @@
             // lab_Listar
             // 
             this.lab_Listar.AutoSize = true;
-            this.lab_Listar.Location = new System.Drawing.Point(21, 73);
+            this.lab_Listar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Listar.Location = new System.Drawing.Point(13, 88);
+            this.lab_Listar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_Listar.Name = "lab_Listar";
-            this.lab_Listar.Size = new System.Drawing.Size(59, 13);
+            this.lab_Listar.Size = new System.Drawing.Size(95, 18);
             this.lab_Listar.TabIndex = 3;
             this.lab_Listar.Text = "Listar livos:";
             // 
             // lab_CadLivro
             // 
             this.lab_CadLivro.AutoSize = true;
-            this.lab_CadLivro.Location = new System.Drawing.Point(172, 73);
+            this.lab_CadLivro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_CadLivro.Location = new System.Drawing.Point(218, 88);
+            this.lab_CadLivro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_CadLivro.Name = "lab_CadLivro";
-            this.lab_CadLivro.Size = new System.Drawing.Size(77, 13);
+            this.lab_CadLivro.Size = new System.Drawing.Size(124, 18);
             this.lab_CadLivro.TabIndex = 4;
             this.lab_CadLivro.Text = "Cadastrar livro:";
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 186);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(465, 229);
             this.Controls.Add(this.lab_CadLivro);
             this.Controls.Add(this.lab_Listar);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_CadLivro);
             this.Controls.Add(this.btn_Listar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPrincipal";
             this.Text = "Menu Principal";
             this.ResumeLayout(false);

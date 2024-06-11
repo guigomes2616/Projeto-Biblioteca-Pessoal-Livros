@@ -16,5 +16,10 @@ namespace Formularios
         {
             InitializeComponent();
         }
+
+        private void tb_AnoPublicacao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

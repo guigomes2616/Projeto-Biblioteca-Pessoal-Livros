@@ -45,44 +45,55 @@
             // lab_nomeCad
             // 
             this.lab_nomeCad.AutoSize = true;
-            this.lab_nomeCad.Location = new System.Drawing.Point(12, 12);
+            this.lab_nomeCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_nomeCad.Location = new System.Drawing.Point(8, 14);
+            this.lab_nomeCad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_nomeCad.Name = "lab_nomeCad";
-            this.lab_nomeCad.Size = new System.Drawing.Size(38, 13);
+            this.lab_nomeCad.Size = new System.Drawing.Size(52, 16);
             this.lab_nomeCad.TabIndex = 1;
             this.lab_nomeCad.Text = "Nome:";
             // 
             // lab_datanasCad
             // 
             this.lab_datanasCad.AutoSize = true;
-            this.lab_datanasCad.Location = new System.Drawing.Point(12, 45);
+            this.lab_datanasCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_datanasCad.Location = new System.Drawing.Point(3, 55);
+            this.lab_datanasCad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_datanasCad.Name = "lab_datanasCad";
-            this.lab_datanasCad.Size = new System.Drawing.Size(107, 13);
+            this.lab_datanasCad.Size = new System.Drawing.Size(152, 16);
             this.lab_datanasCad.TabIndex = 2;
             this.lab_datanasCad.Text = "Data de Nascimento:";
             // 
             // lab_emailCad
             // 
             this.lab_emailCad.AutoSize = true;
-            this.lab_emailCad.Location = new System.Drawing.Point(12, 77);
+            this.lab_emailCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_emailCad.Location = new System.Drawing.Point(10, 97);
+            this.lab_emailCad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_emailCad.Name = "lab_emailCad";
-            this.lab_emailCad.Size = new System.Drawing.Size(35, 13);
+            this.lab_emailCad.Size = new System.Drawing.Size(50, 16);
             this.lab_emailCad.TabIndex = 3;
             this.lab_emailCad.Text = "Email:";
             // 
             // lab_nicknameCad
             // 
             this.lab_nicknameCad.AutoSize = true;
-            this.lab_nicknameCad.Location = new System.Drawing.Point(12, 113);
+            this.lab_nicknameCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_nicknameCad.Location = new System.Drawing.Point(16, 139);
+            this.lab_nicknameCad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_nicknameCad.Name = "lab_nicknameCad";
-            this.lab_nicknameCad.Size = new System.Drawing.Size(45, 13);
+            this.lab_nicknameCad.Size = new System.Drawing.Size(65, 16);
             this.lab_nicknameCad.TabIndex = 4;
             this.lab_nicknameCad.Text = "Apelido:";
             // 
             // btn_voltar
             // 
-            this.btn_voltar.Location = new System.Drawing.Point(15, 187);
+            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.Purple;
+            this.btn_voltar.Location = new System.Drawing.Point(20, 230);
+            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(104, 23);
+            this.btn_voltar.Size = new System.Drawing.Size(139, 28);
             this.btn_voltar.TabIndex = 5;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.UseVisualStyleBackColor = true;
@@ -90,9 +101,12 @@
             // 
             // btn_cadastrar
             // 
-            this.btn_cadastrar.Location = new System.Drawing.Point(125, 187);
+            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cadastrar.ForeColor = System.Drawing.Color.Purple;
+            this.btn_cadastrar.Location = new System.Drawing.Point(167, 230);
+            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(100, 23);
+            this.btn_cadastrar.Size = new System.Drawing.Size(133, 28);
             this.btn_cadastrar.TabIndex = 6;
             this.btn_cadastrar.Text = "Cadastrar";
             this.btn_cadastrar.UseVisualStyleBackColor = true;
@@ -101,52 +115,60 @@
             // lab_senhaCad
             // 
             this.lab_senhaCad.AutoSize = true;
-            this.lab_senhaCad.Location = new System.Drawing.Point(12, 148);
+            this.lab_senhaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_senhaCad.Location = new System.Drawing.Point(16, 182);
+            this.lab_senhaCad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lab_senhaCad.Name = "lab_senhaCad";
-            this.lab_senhaCad.Size = new System.Drawing.Size(41, 13);
+            this.lab_senhaCad.Size = new System.Drawing.Size(55, 16);
             this.lab_senhaCad.TabIndex = 7;
             this.lab_senhaCad.Text = "Senha:";
             // 
             // tb_nome
             // 
-            this.tb_nome.Location = new System.Drawing.Point(47, 9);
+            this.tb_nome.Location = new System.Drawing.Point(63, 11);
+            this.tb_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_nome.Name = "tb_nome";
-            this.tb_nome.Size = new System.Drawing.Size(178, 20);
+            this.tb_nome.Size = new System.Drawing.Size(236, 22);
             this.tb_nome.TabIndex = 8;
             // 
             // tb_dataNascimento
             // 
-            this.tb_dataNascimento.Location = new System.Drawing.Point(116, 42);
+            this.tb_dataNascimento.Location = new System.Drawing.Point(155, 52);
+            this.tb_dataNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_dataNascimento.Name = "tb_dataNascimento";
-            this.tb_dataNascimento.Size = new System.Drawing.Size(109, 20);
+            this.tb_dataNascimento.Size = new System.Drawing.Size(144, 22);
             this.tb_dataNascimento.TabIndex = 9;
             // 
             // tb_email
             // 
-            this.tb_email.Location = new System.Drawing.Point(47, 74);
+            this.tb_email.Location = new System.Drawing.Point(63, 91);
+            this.tb_email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(178, 20);
+            this.tb_email.Size = new System.Drawing.Size(236, 22);
             this.tb_email.TabIndex = 10;
             // 
             // tb_nickname
             // 
-            this.tb_nickname.Location = new System.Drawing.Point(59, 110);
+            this.tb_nickname.Location = new System.Drawing.Point(79, 135);
+            this.tb_nickname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_nickname.Name = "tb_nickname";
-            this.tb_nickname.Size = new System.Drawing.Size(166, 20);
+            this.tb_nickname.Size = new System.Drawing.Size(220, 22);
             this.tb_nickname.TabIndex = 11;
             // 
             // tb_senha
             // 
-            this.tb_senha.Location = new System.Drawing.Point(59, 145);
+            this.tb_senha.Location = new System.Drawing.Point(79, 178);
+            this.tb_senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_senha.Name = "tb_senha";
-            this.tb_senha.Size = new System.Drawing.Size(166, 20);
+            this.tb_senha.Size = new System.Drawing.Size(220, 22);
             this.tb_senha.TabIndex = 12;
             // 
             // FormCadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 230);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(487, 283);
             this.Controls.Add(this.tb_senha);
             this.Controls.Add(this.tb_nickname);
             this.Controls.Add(this.tb_email);
@@ -159,6 +181,7 @@
             this.Controls.Add(this.lab_emailCad);
             this.Controls.Add(this.lab_datanasCad);
             this.Controls.Add(this.lab_nomeCad);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCadastro";
             this.Text = "Cadastro de Usuario";
             this.ResumeLayout(false);
