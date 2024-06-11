@@ -97,7 +97,7 @@ namespace Formularios
             // 
             // FormLivro
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(412, 288);
             this.Controls.Add(this.cb_Generos);
             this.Controls.Add(this.tb_nomeLivro);
             this.Controls.Add(this.tb_autorLivro);

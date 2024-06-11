@@ -6,20 +6,22 @@ namespace Formularios
 {
     public partial class FormLivro : Form
     {
+        private int usuarioId;
         private MySqlConnection connection;
 
-        public FormLivro()
+        public FormLivro(int usuarioId)
         {
             InitializeComponent();
             connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
             btn_Voltar.Click += new EventHandler(btn_Voltar_Click);
             btn_Cadastrar.Click += new EventHandler(btn_Cadastrar_Click);
+            this.usuarioId = usuarioId;
         }
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
             this.Close();
-            var formPrincipal = new FormPrincipal();
+            var formPrincipal = new FormPrincipal(usuarioId);
             formPrincipal.Show();
         }
 

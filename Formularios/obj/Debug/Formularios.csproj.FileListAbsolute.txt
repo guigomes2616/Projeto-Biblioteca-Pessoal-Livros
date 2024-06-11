@@ -203,3 +203,40 @@ C:\Users\Tecnico\Desktop\Projeto-DS\Formularios\obj\Debug\Formularios.csproj.Cor
 C:\Users\Tecnico\Desktop\Projeto-DS\Formularios\obj\Debug\Formular.9034CDC0.Up2Date
 C:\Users\Tecnico\Desktop\Projeto-DS\Formularios\obj\Debug\Formularios.exe
 C:\Users\Tecnico\Desktop\Projeto-DS\Formularios\obj\Debug\Formularios.pdb
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formularios.FormLivro.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\MySql.Data.EntityFrameworkCore.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\System.Collections.Immutable.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\MySql.Data.EntityFrameworkCore.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\System.Collections.Immutable.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formularios.FormListarLivros.resources

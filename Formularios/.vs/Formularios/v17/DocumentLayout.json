@@ -1,66 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\",
+  "WorkspaceRootPath": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\formlivro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:Form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\guilh\\onedrive\\\u00E1rea de trabalho\\projeto-ds\\formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formlistarlivros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlistarlivros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-=======
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
->>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-=======
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
->>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,191 +42,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 3,
-=======
-          "SelectedChildIndex": 2,
->>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormLivro.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.cs",
-              "RelativeDocumentMoniker": "FormLivro.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.cs",
-              "RelativeToolTip": "FormLivro.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:49:22.283Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "FormLivro.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.Designer.cs",
-              "RelativeDocumentMoniker": "FormLivro.Designer.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.Designer.cs",
-              "RelativeToolTip": "FormLivro.Designer.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAuwHUAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:53:28.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLivro.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.cs",
-              "RelativeDocumentMoniker": "FormLivro.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.cs [Design]",
-              "RelativeToolTip": "FormLivro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:48:58.509Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormCadastroLivro.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormCadastroLivro.cs",
-              "RelativeDocumentMoniker": "FormCadastroLivro.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormCadastroLivro.cs",
-              "RelativeToolTip": "FormCadastroLivro.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAqwE0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T00:28:31.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-=======
-              "DocumentIndex": 0,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs [Design]",
-              "RelativeToolTip": "Form2.cs [Design]",
+              "Title": "FormLivro.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormLivro.cs",
+              "RelativeDocumentMoniker": "FormLivro.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormLivro.cs",
+              "RelativeToolTip": "FormLivro.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:03:40.313Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T15:21:29.294Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
->>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
+              "Title": "FormPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormPrincipal.cs",
+              "RelativeDocumentMoniker": "FormPrincipal.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormPrincipal.cs",
+              "RelativeToolTip": "FormPrincipal.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAIA6wCwAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T15:03:16.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormListarLivros.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormListarLivros.cs",
+              "RelativeDocumentMoniker": "FormListarLivros.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormListarLivros.cs [Design]",
+              "RelativeToolTip": "FormListarLivros.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T14:57:43.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormCadastroLivro.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormCadastroLivro.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormCadastroLivro.cs",
               "RelativeDocumentMoniker": "FormCadastroLivro.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormCadastroLivro.cs [Design]",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormCadastroLivro.cs [Design]",
               "RelativeToolTip": "FormCadastroLivro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T03:57:12.779Z",
+              "WhenOpened": "2024-06-11T14:00:43.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T14:00:43.105Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAUwE0AAAABAAAA",
+              "Title": "FormPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormPrincipal.cs",
+              "RelativeDocumentMoniker": "FormPrincipal.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormPrincipal.cs [Design]",
+              "RelativeToolTip": "FormPrincipal.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T02:18:59.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs",
-              "RelativeToolTip": "Form2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T02:26:54.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T14:00:43.113Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "Title": "FormLivro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormLivro.cs",
+              "RelativeDocumentMoniker": "FormLivro.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\FormLivro.cs [Design]",
+              "RelativeToolTip": "FormLivro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T23:29:28.147Z",
-=======
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T23:29:28.147Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T14:00:42.983Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs [Design]",
-              "RelativeToolTip": "FormPrincipal.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T00:46:09.313Z",
->>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FormPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs",
-              "RelativeToolTip": "FormPrincipal.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAADwv1AAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T02:01:01.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormPrincipal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs [Design]",
-              "RelativeToolTip": "FormPrincipal.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T00:46:09.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs [Design]",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\Formularios\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T00:15:28.814Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-11T14:00:43.117Z"
             }
           ]
         }

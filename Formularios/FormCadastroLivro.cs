@@ -6,26 +6,27 @@ namespace Formularios
 {
     public partial class FormCadastroLivro : Form
     {
-        private MySqlConnection connection;
+        private int usuarioId;
+        private string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
 
-        public FormCadastroLivro()
+        public FormCadastroLivro(int usuarioId)
         {
             InitializeComponent();
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            this.usuarioId = usuarioId; // Recebe o ID do usuário passado no momento da inicialização
         }
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
             this.Close();
-            var formPrincipal = new FormPrincipal();
+            var formPrincipal = new FormPrincipal(usuarioId); // Passa o ID do usuário para a próxima tela
             formPrincipal.Show();
         }
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            string nomeLivro = tb_nomeLivro.Text;
-            string autorLivro = tb_autorLivro.Text;
-            string anoPublicacaoStr = tb_anoPublicacao.Text;
+            string nomeLivro = tb_nomeLivro.Text.Trim();
+            string autorLivro = tb_autorLivro.Text.Trim();
+            string anoPublicacaoStr = tb_anoPublicacao.Text.Trim();
             int generoLivro = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
             int anoPublicacao;
 
@@ -43,26 +44,58 @@ namespace Formularios
                 return;
             }
 
+            // Verificar se o gênero existe na tabela de gêneros
+            if (!GeneroExiste(generoLivro))
+            {
+                MessageBox.Show("Gênero inválido. Por favor, selecione um gênero válido.");
+                return;
+            }
+
             try
             {
-                connection.Open();
-                string query = "INSERT INTO livro (genero_livro, nome_livro, autor_livro, ano_publicacao) VALUES (@Genero, @Nome, @Autor, @Ano)";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Genero", generoLivro);
-                command.Parameters.AddWithValue("@Nome", nomeLivro);
-                command.Parameters.AddWithValue("@Autor", autorLivro);
-                command.Parameters.AddWithValue("@Ano", anoPublicacao);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Livro cadastrado com sucesso!");
-                LimparCampos();
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO livro (genero_livro, nome_livro, autor_livro, ano_publicacao, id_usuario) VALUES (@Genero, @Nome, @Autor, @Ano, @Usuario)";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Genero", generoLivro);
+                        command.Parameters.AddWithValue("@Nome", nomeLivro);
+                        command.Parameters.AddWithValue("@Autor", autorLivro);
+                        command.Parameters.AddWithValue("@Ano", anoPublicacao);
+                        command.Parameters.AddWithValue("@Usuario", usuarioId);
+                        command.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Livro cadastrado com sucesso!");
+                    LimparCampos();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao cadastrar livro: {ex.Message}");
             }
-            finally
+        }
+
+        private bool GeneroExiste(int generoId)
+        {
+            try
             {
-                connection.Close();
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM generos WHERE id = @GeneroId";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@GeneroId", generoId);
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        return count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao verificar gênero: {ex.Message}");
+                return false;
             }
         }
 
@@ -76,7 +109,7 @@ namespace Formularios
 
         private void tb_AnoPublicacao_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
     }
 }

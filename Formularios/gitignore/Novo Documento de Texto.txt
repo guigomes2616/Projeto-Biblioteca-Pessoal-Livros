@@ -1,0 +1,28 @@
+# Arquivos temporários
+bin/
+obj/
+ 
+# Arquivos de compilação
+*.exe
+*.dll
+*.pdb
+ 
+# Arquivos de log
+*.log
+ 
+# Arquivos de usuário
+*.user
+*.suo
+*.cache
+*.userprefs
+ 
+# Arquivos gerados pela IDE
+*.vscode/
+.vs/
+ 
+# Dependências do NuGet
+/packages/
+ 
+# Arquivos de saída do Visual Studio
+*.sln.docstates
+*.suo

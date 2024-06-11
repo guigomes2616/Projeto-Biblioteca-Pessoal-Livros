@@ -74,5 +74,10 @@ namespace Formularios
             var formLogin = new FormLogin();
             formLogin.Show();
         }
+
+        private void tb_nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

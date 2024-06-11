@@ -59,7 +59,8 @@ namespace Formularios
             {
                 MessageBox.Show("Login realizado com sucesso!");
                 this.Hide();
-                var formPrincipal = new FormPrincipal();
+                int usuarioId = 1;
+                var formPrincipal = new FormPrincipal(usuarioId);
                 formPrincipal.Show();
             }
             else

@@ -14,11 +14,13 @@ namespace Formularios
 {
     public partial class FormPrincipal : Form
     {
+        private int usuarioId;
         private MySqlConnection connection;
 
-        public FormPrincipal()
+        public FormPrincipal(int idUsuario)
         {
             InitializeComponent();
+            this.usuarioId = idUsuario;
             connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
 
             btn_Listar.Click += btn_Listar_Click;
@@ -32,42 +34,13 @@ namespace Formularios
         }
         private void ListarLivros()
         {
-            lab_Listar.Text = "---------- Lista de Seus Livros ---------- \n";
-
-            try
-            {
-                connection.Open();
-                string query = "SELECT * FROM livro WHERE id_usuario = @IdUsuario";
-                MySqlCommand command = new MySqlCommand(query, connection);
-
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            lab_Listar.Text += $"Título: {reader.GetString("nome_livro")} | Autor: {reader.GetString("autor_livro")} | Ano de Publicação: {reader.GetInt32("ano_publicacao")} | Gênero: {reader.GetInt32("genero_livro")}\n";
-                        }
-                    }
-                    else
-                    {
-                        lab_Listar.Text = "Nenhum livro cadastrado.";
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                lab_Listar.Text = $"Erro ao listar os livros: {ex.Message}";
-            }
-            finally
-            {
-                connection.Close();
-            }
+            var formListarLivros = new FormListarLivros(usuarioId);
+            formListarLivros.Show();
         }
 
         private void btn_CadLivro_Click(object sender, EventArgs e)
         {
-            FormCadastroLivro formCadLivro = new FormCadastroLivro();
+            FormCadastroLivro formCadLivro = new FormCadastroLivro(usuarioId);
             formCadLivro.Show();
             this.Hide(); // Esconde a tela principal ao mostrar a nova tela
         }
