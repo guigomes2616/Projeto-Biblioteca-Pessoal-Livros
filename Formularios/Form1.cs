@@ -74,5 +74,10 @@ namespace Formularios
             var formCadastro = new FormCadastro();
             formCadastro.Show();
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

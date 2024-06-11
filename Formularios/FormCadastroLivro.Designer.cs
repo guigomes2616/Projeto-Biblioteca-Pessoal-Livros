@@ -29,57 +29,61 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lb_NomeLivro = new System.Windows.Forms.Label();
+            this.lb_AutorLivro = new System.Windows.Forms.Label();
+            this.lb_AnoPublicacao = new System.Windows.Forms.Label();
+            this.cb_Generos = new System.Windows.Forms.CheckedListBox();
+            this.tb_NomeLivro = new System.Windows.Forms.TextBox();
+            this.tb_AnoPublicacao = new System.Windows.Forms.TextBox();
+            this.tb_AutorLivro = new System.Windows.Forms.TextBox();
+            this.btn_Voltar = new System.Windows.Forms.Button();
+            this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Location = new System.Drawing.Point(16, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 13);
+            this.label1.Size = new System.Drawing.Size(177, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione o Gênero do livro:";
             // 
-            // label2
+            // lb_NomeLivro
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Digite o Nome do livro:";
+            this.lb_NomeLivro.AutoSize = true;
+            this.lb_NomeLivro.Location = new System.Drawing.Point(16, 294);
+            this.lb_NomeLivro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_NomeLivro.Name = "lb_NomeLivro";
+            this.lb_NomeLivro.Size = new System.Drawing.Size(143, 16);
+            this.lb_NomeLivro.TabIndex = 1;
+            this.lb_NomeLivro.Text = "Digite o Nome do livro:";
             // 
-            // label3
+            // lb_AutorLivro
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Digite o Autor do livro:";
+            this.lb_AutorLivro.AutoSize = true;
+            this.lb_AutorLivro.Location = new System.Drawing.Point(16, 332);
+            this.lb_AutorLivro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_AutorLivro.Name = "lb_AutorLivro";
+            this.lb_AutorLivro.Size = new System.Drawing.Size(137, 16);
+            this.lb_AutorLivro.TabIndex = 2;
+            this.lb_AutorLivro.Text = "Digite o Autor do livro:";
             // 
-            // label4
+            // lb_AnoPublicacao
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 303);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Digite o Ano de publicação:";
+            this.lb_AnoPublicacao.AutoSize = true;
+            this.lb_AnoPublicacao.Location = new System.Drawing.Point(16, 373);
+            this.lb_AnoPublicacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_AnoPublicacao.Name = "lb_AnoPublicacao";
+            this.lb_AnoPublicacao.Size = new System.Drawing.Size(172, 16);
+            this.lb_AnoPublicacao.TabIndex = 3;
+            this.lb_AnoPublicacao.Text = "Digite o Ano de publicação:";
             // 
-            // checkedListBox1
+            // cb_Generos
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.cb_Generos.FormattingEnabled = true;
+            this.cb_Generos.Items.AddRange(new object[] {
             "Acao",
             "Aventura",
             "Comedia",
@@ -93,65 +97,72 @@
             "Romance",
             "Suspense",
             "Terror"});
-            this.checkedListBox1.Location = new System.Drawing.Point(159, 23);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(149, 199);
-            this.checkedListBox1.TabIndex = 4;
+            this.cb_Generos.Location = new System.Drawing.Point(212, 28);
+            this.cb_Generos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Generos.Name = "cb_Generos";
+            this.cb_Generos.Size = new System.Drawing.Size(197, 242);
+            this.cb_Generos.TabIndex = 4;
             // 
-            // textBox1
+            // tb_NomeLivro
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 5;
+            this.tb_NomeLivro.Location = new System.Drawing.Point(176, 290);
+            this.tb_NomeLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_NomeLivro.Name = "tb_NomeLivro";
+            this.tb_NomeLivro.Size = new System.Drawing.Size(233, 22);
+            this.tb_NomeLivro.TabIndex = 5;
             // 
-            // textBox2
+            // tb_AnoPublicacao
             // 
-            this.textBox2.Location = new System.Drawing.Point(153, 300);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 20);
-            this.textBox2.TabIndex = 6;
+            this.tb_AnoPublicacao.Location = new System.Drawing.Point(204, 369);
+            this.tb_AnoPublicacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_AnoPublicacao.Name = "tb_AnoPublicacao";
+            this.tb_AnoPublicacao.Size = new System.Drawing.Size(205, 22);
+            this.tb_AnoPublicacao.TabIndex = 6;
             // 
-            // textBox3
+            // tb_AutorLivro
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 267);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 20);
-            this.textBox3.TabIndex = 7;
+            this.tb_AutorLivro.Location = new System.Drawing.Point(176, 329);
+            this.tb_AutorLivro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_AutorLivro.Name = "tb_AutorLivro";
+            this.tb_AutorLivro.Size = new System.Drawing.Size(233, 22);
+            this.tb_AutorLivro.TabIndex = 7;
             // 
-            // button1
+            // btn_Voltar
             // 
-            this.button1.Location = new System.Drawing.Point(15, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Voltar.Location = new System.Drawing.Point(20, 418);
+            this.btn_Voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Voltar.Name = "btn_Voltar";
+            this.btn_Voltar.Size = new System.Drawing.Size(180, 28);
+            this.btn_Voltar.TabIndex = 8;
+            this.btn_Voltar.Text = "Voltar";
+            this.btn_Voltar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_Cadastrar
             // 
-            this.button2.Location = new System.Drawing.Point(159, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cadastrar.Location = new System.Drawing.Point(212, 418);
+            this.btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Cadastrar.Name = "btn_Cadastrar";
+            this.btn_Cadastrar.Size = new System.Drawing.Size(199, 28);
+            this.btn_Cadastrar.TabIndex = 9;
+            this.btn_Cadastrar.Text = "Cadastrar";
+            this.btn_Cadastrar.UseVisualStyleBackColor = true;
             // 
             // FormCadastroLivro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 364);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(711, 448);
+            this.Controls.Add(this.btn_Cadastrar);
+            this.Controls.Add(this.btn_Voltar);
+            this.Controls.Add(this.tb_AutorLivro);
+            this.Controls.Add(this.tb_AnoPublicacao);
+            this.Controls.Add(this.tb_NomeLivro);
+            this.Controls.Add(this.cb_Generos);
+            this.Controls.Add(this.lb_AnoPublicacao);
+            this.Controls.Add(this.lb_AutorLivro);
+            this.Controls.Add(this.lb_NomeLivro);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCadastroLivro";
             this.Text = "FormCadastroLivro";
             this.ResumeLayout(false);
@@ -162,14 +173,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lb_NomeLivro;
+        private System.Windows.Forms.Label lb_AutorLivro;
+        private System.Windows.Forms.Label lb_AnoPublicacao;
+        private System.Windows.Forms.CheckedListBox cb_Generos;
+        private System.Windows.Forms.TextBox tb_NomeLivro;
+        private System.Windows.Forms.TextBox tb_AnoPublicacao;
+        private System.Windows.Forms.TextBox tb_AutorLivro;
+        private System.Windows.Forms.Button btn_Voltar;
+        private System.Windows.Forms.Button btn_Cadastrar;
     }
 }
