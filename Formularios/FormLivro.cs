@@ -1,17 +1,19 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Formularios
 {
-    public partial class FormCadastroLivro : Form
+    public partial class FormLivro : Form
     {
         private MySqlConnection connection;
 
-        public FormCadastroLivro()
+        public FormLivro()
         {
             InitializeComponent();
             connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            btn_Voltar.Click += new EventHandler(btn_Voltar_Click);
+            btn_Cadastrar.Click += new EventHandler(btn_Cadastrar_Click);
         }
 
         private void btn_Voltar_Click(object sender, EventArgs e)
@@ -26,17 +28,15 @@ namespace Formularios
             string nomeLivro = tb_nomeLivro.Text;
             string autorLivro = tb_autorLivro.Text;
             string anoPublicacaoStr = tb_anoPublicacao.Text;
-            int generoLivro = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
             int anoPublicacao;
+            int generoLivro = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
 
-            // Validação dos campos
             if (string.IsNullOrWhiteSpace(nomeLivro) || string.IsNullOrWhiteSpace(autorLivro) || string.IsNullOrWhiteSpace(anoPublicacaoStr) || generoLivro < 1 || generoLivro > 13)
             {
                 MessageBox.Show("Por favor, preencha todos os campos corretamente.");
                 return;
             }
 
-            // Verificação se o ano de publicação é válido
             if (!int.TryParse(anoPublicacaoStr, out anoPublicacao) || anoPublicacao > DateTime.Now.Year)
             {
                 MessageBox.Show("Ano de publicação inválido. Por favor, insira um ano válido.");
@@ -68,10 +68,10 @@ namespace Formularios
 
         private void LimparCampos()
         {
-            tb_nomeLivro.Clear();
-            tb_autorLivro.Clear();
-            tb_anoPublicacao.Clear();
-            cb_Generos.SelectedIndex = -1; // Reseta o ComboBox
+            tb_nomeLivro.Text = "";
+            tb_autorLivro.Text = "";
+            tb_anoPublicacao.Text = "";
+            cb_Generos.SelectedIndex = -1;
         }
     }
 }

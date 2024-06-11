@@ -172,6 +172,12 @@
     <Compile Include="FormCadastroLivro.Designer.cs">
       <DependentUpon>FormCadastroLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLivro.Designer.cs">
+      <DependentUpon>FormLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
