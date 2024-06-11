@@ -73,5 +73,10 @@ namespace Formularios
             tb_anoPublicacao.Clear();
             cb_Generos.SelectedIndex = -1; // Reseta o ComboBox
         }
+
+        private void tb_AnoPublicacao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

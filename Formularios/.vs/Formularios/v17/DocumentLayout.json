@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -39,12 +40,27 @@
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|c:\\users\\tecnico\\desktop\\projeto-ds\\formularios\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+>>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
       "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+=======
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59FDCB43-41D3-47CE-B12C-69E587A50B84}|Formularios.csproj|solutionrelative:formcadastrolivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 2,
+>>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
           "Children": [
             {
               "$type": "Document",
@@ -76,6 +96,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "FormLivro.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormLivro.Designer.cs",
@@ -115,6 +136,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+=======
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form2.cs [Design]",
+              "RelativeToolTip": "Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T01:03:40.313Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+>>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
               "Title": "FormCadastroLivro.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormCadastroLivro.cs",
               "RelativeDocumentMoniker": "FormCadastroLivro.cs",
@@ -126,6 +162,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
@@ -160,6 +197,28 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T23:29:28.147Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T23:29:28.147Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs",
+              "RelativeDocumentMoniker": "FormPrincipal.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Formularios\\FormPrincipal.cs [Design]",
+              "RelativeToolTip": "FormPrincipal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T00:46:09.313Z",
+>>>>>>> 4c84df89b31fd7d7290d3c2bb1b1f1b56da2b6d0
               "EditorCaption": " [Design]"
             },
             {
