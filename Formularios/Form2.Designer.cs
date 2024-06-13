@@ -8,9 +8,8 @@
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Clean up any resources being used, incluindo todos os controles de formulário.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +22,7 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método para chamar o Designer.
         /// </summary>
         private void InitializeComponent()
         {
@@ -32,20 +30,20 @@
             this.lab_datanasCad = new System.Windows.Forms.Label();
             this.lab_emailCad = new System.Windows.Forms.Label();
             this.lab_nicknameCad = new System.Windows.Forms.Label();
-            this.btn_voltar = new System.Windows.Forms.Button();
-            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.lab_senhaCad = new System.Windows.Forms.Label();
             this.tb_nome = new System.Windows.Forms.TextBox();
             this.tb_dataNascimento = new System.Windows.Forms.TextBox();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.tb_nickname = new System.Windows.Forms.TextBox();
             this.tb_senha = new System.Windows.Forms.TextBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lab_nomeCad
             // 
             this.lab_nomeCad.AutoSize = true;
-            this.lab_nomeCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_nomeCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lab_nomeCad.Location = new System.Drawing.Point(36, 19);
             this.lab_nomeCad.Name = "lab_nomeCad";
             this.lab_nomeCad.Size = new System.Drawing.Size(43, 13);
@@ -55,7 +53,7 @@
             // lab_datanasCad
             // 
             this.lab_datanasCad.AutoSize = true;
-            this.lab_datanasCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_datanasCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lab_datanasCad.Location = new System.Drawing.Point(36, 49);
             this.lab_datanasCad.Name = "lab_datanasCad";
             this.lab_datanasCad.Size = new System.Drawing.Size(126, 13);
@@ -65,7 +63,7 @@
             // lab_emailCad
             // 
             this.lab_emailCad.AutoSize = true;
-            this.lab_emailCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_emailCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lab_emailCad.Location = new System.Drawing.Point(36, 83);
             this.lab_emailCad.Name = "lab_emailCad";
             this.lab_emailCad.Size = new System.Drawing.Size(41, 13);
@@ -75,41 +73,17 @@
             // lab_nicknameCad
             // 
             this.lab_nicknameCad.AutoSize = true;
-            this.lab_nicknameCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_nicknameCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lab_nicknameCad.Location = new System.Drawing.Point(36, 115);
             this.lab_nicknameCad.Name = "lab_nicknameCad";
             this.lab_nicknameCad.Size = new System.Drawing.Size(53, 13);
             this.lab_nicknameCad.TabIndex = 4;
             this.lab_nicknameCad.Text = "Apelido:";
             // 
-            // btn_voltar
-            // 
-            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.Purple;
-            this.btn_voltar.Location = new System.Drawing.Point(39, 195);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(104, 23);
-            this.btn_voltar.TabIndex = 5;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = true;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
-            // 
-            // btn_cadastrar
-            // 
-            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.Color.Purple;
-            this.btn_cadastrar.Location = new System.Drawing.Point(194, 195);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(100, 23);
-            this.btn_cadastrar.TabIndex = 6;
-            this.btn_cadastrar.Text = "Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = true;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
-            // 
             // lab_senhaCad
             // 
             this.lab_senhaCad.AutoSize = true;
-            this.lab_senhaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_senhaCad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.lab_senhaCad.Location = new System.Drawing.Point(36, 150);
             this.lab_senhaCad.Name = "lab_senhaCad";
             this.lab_senhaCad.Size = new System.Drawing.Size(47, 13);
@@ -122,7 +96,6 @@
             this.tb_nome.Name = "tb_nome";
             this.tb_nome.Size = new System.Drawing.Size(209, 20);
             this.tb_nome.TabIndex = 8;
-            this.tb_nome.TextChanged += new System.EventHandler(this.tb_nome_TextChanged);
             // 
             // tb_dataNascimento
             // 
@@ -152,6 +125,30 @@
             this.tb_senha.Size = new System.Drawing.Size(207, 20);
             this.tb_senha.TabIndex = 12;
             // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btn_voltar.ForeColor = System.Drawing.Color.Purple;
+            this.btn_voltar.Location = new System.Drawing.Point(39, 195);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(104, 23);
+            this.btn_voltar.TabIndex = 5;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.btn_cadastrar.ForeColor = System.Drawing.Color.Purple;
+            this.btn_cadastrar.Location = new System.Drawing.Point(194, 195);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(100, 23);
+            this.btn_cadastrar.TabIndex = 6;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,17 +175,19 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label lab_nomeCad;
         private System.Windows.Forms.Label lab_datanasCad;
         private System.Windows.Forms.Label lab_emailCad;
         private System.Windows.Forms.Label lab_nicknameCad;
-        private System.Windows.Forms.Button btn_voltar;
-        private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Label lab_senhaCad;
         private System.Windows.Forms.TextBox tb_nome;
         private System.Windows.Forms.TextBox tb_dataNascimento;
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.TextBox tb_nickname;
         private System.Windows.Forms.TextBox tb_senha;
+        private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_cadastrar;
     }
 }
+

@@ -1,0 +1,53 @@
+# Diretórios e arquivos de build do Visual Studio
+bin/
+obj/
+.vs/
+
+# Arquivos executáveis
+*.exe
+
+# Arquivos temporários
+*.tmp
+
+# Arquivos específicos do projeto
+*.suo
+*.user
+
+# Ignorar qualquer arquivo de configuração pessoal do usuário
+user_settings/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar qualquer outra pasta que não deva ser versionada
+debug/
+release/
+
+# Arquivos temporários
+bin/
+obj/
+ 
+# Arquivos de compilação
+*.exe
+*.dll
+*.pdb
+ 
+# Arquivos de log
+*.log
+ 
+# Arquivos de usuário
+*.user
+*.suo
+*.cache
+*.userprefs
+ 
+# Arquivos gerados pela IDE
+*.vscode/
+.vs/
+ 
+# Dependências do NuGet
+/packages/
+ 
+# Arquivos de saída do Visual Studio
+*.sln.docstates
+*.suo

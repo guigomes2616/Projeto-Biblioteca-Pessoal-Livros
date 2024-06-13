@@ -11,9 +11,9 @@ namespace Formularios
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Limpar recursos que estão sendo usados.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true se recursos gerenciados devem ser descartados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,11 +23,10 @@ namespace Formularios
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Windows Form Designer gerado código
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método para chamar o Designer.
         /// </summary>
         private void InitializeComponent()
         {
@@ -83,16 +82,16 @@ namespace Formularios
             // 
             this.cb_Generos.FormattingEnabled = true;
             this.cb_Generos.Items.AddRange(new object[] {
-            "Acao",
+            "Ação",
             "Aventura",
-            "Comedia",
-            "Documentario",
+            "Comédia",
+            "Documentário",
             "Drama",
             "Espionagem",
             "Faroeste",
             "Fantasia",
-            "Ficcao_Cientifica",
-            "Auto_Ajuda",
+            "Ficção Científica",
+            "Autoajuda",
             "Romance",
             "Suspense",
             "Terror"});
@@ -107,7 +106,6 @@ namespace Formularios
             this.tb_nomeLivro.Name = "tb_nomeLivro";
             this.tb_nomeLivro.Size = new System.Drawing.Size(176, 20);
             this.tb_nomeLivro.TabIndex = 5;
-            this.tb_nomeLivro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tb_anoPublicacao
             // 
@@ -115,7 +113,6 @@ namespace Formularios
             this.tb_anoPublicacao.Name = "tb_anoPublicacao";
             this.tb_anoPublicacao.Size = new System.Drawing.Size(155, 20);
             this.tb_anoPublicacao.TabIndex = 6;
-            this.tb_anoPublicacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tb_autorLivro
             // 
@@ -123,7 +120,6 @@ namespace Formularios
             this.tb_autorLivro.Name = "tb_autorLivro";
             this.tb_autorLivro.Size = new System.Drawing.Size(176, 20);
             this.tb_autorLivro.TabIndex = 7;
-            this.tb_autorLivro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_Voltar
             // 
@@ -161,7 +157,7 @@ namespace Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormCadastroLivro";
-            this.Text = "FormCadastroLivro";
+            this.Text = "Cadastro de Livro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,9 +176,13 @@ namespace Formularios
         private System.Windows.Forms.Button btn_Voltar;
         private System.Windows.Forms.Button btn_Cadastrar;
 
+        /// <summary>
+        /// Fornece uma representação em formato de depuração do objeto.
+        /// </summary>
         private string GetDebuggerDisplay()
         {
-            return ToString();
+            return $"Nome: {tb_nomeLivro.Text}, Autor: {tb_autorLivro.Text}, Ano de Publicação: {tb_anoPublicacao.Text}, Gêneros: {string.Join(", ", cb_Generos.CheckedItems)}";
         }
     }
 }
+

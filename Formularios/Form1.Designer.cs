@@ -66,7 +66,7 @@
             this.tb_emailLogin.Name = "tb_emailLogin";
             this.tb_emailLogin.Size = new System.Drawing.Size(173, 20);
             this.tb_emailLogin.TabIndex = 3;
-            this.tb_emailLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_emailLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left; // Ajuste para alinhar o texto à esquerda
             // 
             // tb_senhaLogin
             // 
@@ -74,7 +74,7 @@
             this.tb_senhaLogin.Name = "tb_senhaLogin";
             this.tb_senhaLogin.Size = new System.Drawing.Size(162, 20);
             this.tb_senhaLogin.TabIndex = 4;
-            this.tb_senhaLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_senhaLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left; // Ajuste para alinhar o texto à esquerda
             // 
             // btn_cadastrarLogin
             // 
@@ -117,7 +117,7 @@
             this.ForeColor = System.Drawing.SystemColors.Highlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Login - Cadastro de Livro";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);

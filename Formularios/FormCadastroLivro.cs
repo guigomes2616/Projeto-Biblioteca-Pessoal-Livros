@@ -17,9 +17,9 @@ namespace Formularios
 
         private void btn_Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
             var formPrincipal = new FormPrincipal(usuarioId); // Passa o ID do usuário para a próxima tela
             formPrincipal.Show();
+            Close();
         }
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
@@ -27,11 +27,11 @@ namespace Formularios
             string nomeLivro = tb_nomeLivro.Text.Trim();
             string autorLivro = tb_autorLivro.Text.Trim();
             string anoPublicacaoStr = tb_anoPublicacao.Text.Trim();
-            int generoLivro = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
+            int generoId = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
             int anoPublicacao;
 
             // Validação dos campos
-            if (string.IsNullOrWhiteSpace(nomeLivro) || string.IsNullOrWhiteSpace(autorLivro) || string.IsNullOrWhiteSpace(anoPublicacaoStr) || generoLivro < 1 || generoLivro > 13)
+            if (string.IsNullOrWhiteSpace(nomeLivro) || string.IsNullOrWhiteSpace(autorLivro) || string.IsNullOrWhiteSpace(anoPublicacaoStr) || generoId < 1 || generoId > 13)
             {
                 MessageBox.Show("Por favor, preencha todos os campos corretamente.");
                 return;
@@ -45,7 +45,7 @@ namespace Formularios
             }
 
             // Verificar se o gênero existe na tabela de gêneros
-            if (!GeneroExiste(generoLivro))
+            if (!GeneroExiste(generoId))
             {
                 MessageBox.Show("Gênero inválido. Por favor, selecione um gênero válido.");
                 return;
@@ -56,16 +56,38 @@ namespace Formularios
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO livro (genero_livro, nome_livro, autor_livro, ano_publicacao, id_usuario) VALUES (@Genero, @Nome, @Autor, @Ano, @Usuario)";
+                    string query = "INSERT INTO Livro (nome_livro, autor_livro, ano_publicacao) VALUES (@Nome, @Autor, @Ano);";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Genero", generoLivro);
                         command.Parameters.AddWithValue("@Nome", nomeLivro);
                         command.Parameters.AddWithValue("@Autor", autorLivro);
                         command.Parameters.AddWithValue("@Ano", anoPublicacao);
-                        command.Parameters.AddWithValue("@Usuario", usuarioId);
                         command.ExecuteNonQuery();
                     }
+
+                    int livroId;
+                    query = "SELECT LAST_INSERT_ID();";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        livroId = Convert.ToInt32(command.ExecuteScalar());
+                    }
+
+                    query = "INSERT INTO LivroGenero (livroId, generoId) VALUES (@Livro, @Genero);";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Livro", livroId);
+                        command.Parameters.AddWithValue("@Genero", generoId);
+                        command.ExecuteNonQuery();
+                    }
+
+                    query = "INSERT INTO UsuarioLivro (usuarioId, livroId) VALUES (@Usuario, @Livro);";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Usuario", usuarioId);
+                        command.Parameters.AddWithValue("@Livro", livroId);
+                        command.ExecuteNonQuery();
+                    }
+
                     MessageBox.Show("Livro cadastrado com sucesso!");
                     LimparCampos();
                 }
@@ -83,7 +105,7 @@ namespace Formularios
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(*) FROM generos WHERE id = @GeneroId";
+                    string query = "SELECT COUNT(*) FROM Genero WHERE id_genero = @GeneroId";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@GeneroId", generoId);
@@ -109,7 +131,7 @@ namespace Formularios
 
         private void tb_AnoPublicacao_TextChanged(object sender, EventArgs e)
         {
-        
+
         }
     }
 }
