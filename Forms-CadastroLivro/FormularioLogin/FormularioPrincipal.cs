@@ -30,7 +30,7 @@ namespace FormularioLogin
         // Método para listar livros
         private void ListarLivros()
         {
-            var formListarLivros = new FormularioListarLivros(usuarioId);
+            var formListarLivros = new FormularioListarLivro(usuarioId);
             formListarLivros.Show();
             this.Hide(); // Esconde a tela principal ao mostrar a nova tela
         }
@@ -38,7 +38,7 @@ namespace FormularioLogin
         // Evento para cadastrar livro
         private void btn_CadLivro_Click(object? sender, EventArgs e)
         {
-            var formCadLivro = new FormularioCadastroLivro();
+            var formCadLivro = new FormularioCadastroLivro(usuarioId);
             formCadLivro.Show();
             this.Hide(); // Esconde a tela principal ao mostrar a nova tela
         }

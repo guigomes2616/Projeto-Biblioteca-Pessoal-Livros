@@ -1,4 +1,4 @@
-﻿    using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -54,6 +54,11 @@ namespace FormularioLogin
             var formPrincipal = new FormularioPrincipal(_usuarioId); // Passa o ID do usuário ao formulário principal
             formPrincipal.Show();
             Close(); // Fecha o formulário atual
+        }
+
+        private void btn_Voltar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
