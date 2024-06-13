@@ -7,33 +7,32 @@ namespace Formularios
     public partial class FormLivro : Form
     {
         private int usuarioId;
-        private MySqlConnection connection;
+        private readonly MySqlConnection connection;
 
         public FormLivro(int usuarioId)
         {
             InitializeComponent();
             connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
-            btn_Voltar.Click += new EventHandler(btn_Voltar_Click);
-            btn_Cadastrar.Click += new EventHandler(btn_Cadastrar_Click);
             this.usuarioId = usuarioId;
+            btn_Voltar.Click += Btn_Voltar_Click;
+            btn_Cadastrar.Click += Btn_Cadastrar_Click;
         }
 
-        private void btn_Voltar_Click(object sender, EventArgs e)
+        private async void Btn_Voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             var formPrincipal = new FormPrincipal(usuarioId);
             formPrincipal.Show();
         }
 
-        private void btn_Cadastrar_Click(object sender, EventArgs e)
+        private async void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            string nomeLivro = tb_nomeLivro.Text;
-            string autorLivro = tb_autorLivro.Text;
-            string anoPublicacaoStr = tb_anoPublicacao.Text;
+            string nomeLivro = tb_nomeLivro.Text.Trim();
+            string autorLivro = tb_autorLivro.Text.Trim();
+            string anoPublicacaoStr = tb_anoPublicacao.Text.Trim();
             int anoPublicacao;
-            int generoLivro = cb_Generos.SelectedIndex + 1; // Assume-se que os índices dos gêneros estão de 1 a 13
 
-            if (string.IsNullOrWhiteSpace(nomeLivro) || string.IsNullOrWhiteSpace(autorLivro) || string.IsNullOrWhiteSpace(anoPublicacaoStr) || generoLivro < 1 || generoLivro > 13)
+            if (string.IsNullOrWhiteSpace(nomeLivro) || string.IsNullOrWhiteSpace(autorLivro) || string.IsNullOrWhiteSpace(anoPublicacaoStr))
             {
                 MessageBox.Show("Por favor, preencha todos os campos corretamente.");
                 return;
@@ -47,14 +46,19 @@ namespace Formularios
 
             try
             {
-                connection.Open();
-                string query = "INSERT INTO livro (genero_livro, nome_livro, autor_livro, ano_publicacao) VALUES (@Genero, @Nome, @Autor, @Ano)";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Genero", generoLivro);
-                command.Parameters.AddWithValue("@Nome", nomeLivro);
-                command.Parameters.AddWithValue("@Autor", autorLivro);
-                command.Parameters.AddWithValue("@Ano", anoPublicacao);
-                command.ExecuteNonQuery();
+                await connection.OpenAsync();
+
+                // Inserir livro na tabela Livro
+                string query = "INSERT INTO Livro (nome_livro, autor_livro, ano_publicacao, id_usuario) VALUES (@Nome, @Autor, @Ano, @UsuarioId)";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nome", nomeLivro);
+                    command.Parameters.AddWithValue("@Autor", autorLivro);
+                    command.Parameters.AddWithValue("@Ano", anoPublicacao);
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
+                    await command.ExecuteNonQueryAsync();
+                }
+
                 MessageBox.Show("Livro cadastrado com sucesso!");
                 LimparCampos();
             }
@@ -64,7 +68,7 @@ namespace Formularios
             }
             finally
             {
-                connection.Close();
+                await connection.CloseAsync();
             }
         }
 
@@ -73,7 +77,6 @@ namespace Formularios
             tb_nomeLivro.Text = "";
             tb_autorLivro.Text = "";
             tb_anoPublicacao.Text = "";
-            cb_Generos.SelectedIndex = -1;
         }
     }
 }

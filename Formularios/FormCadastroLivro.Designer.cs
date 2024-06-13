@@ -169,7 +169,6 @@ namespace Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox cb_Generos;
         private System.Windows.Forms.TextBox tb_nomeLivro;
         private System.Windows.Forms.TextBox tb_anoPublicacao;
         private System.Windows.Forms.TextBox tb_autorLivro;
@@ -181,7 +180,7 @@ namespace Formularios
         /// </summary>
         private string GetDebuggerDisplay()
         {
-            return $"Nome: {tb_nomeLivro.Text}, Autor: {tb_autorLivro.Text}, Ano de Publicação: {tb_anoPublicacao.Text}, Gêneros: {string.Join(", ", cb_Generos.CheckedItems)}";
+            return $"Nome: {tb_nomeLivro.Text}, Autor: {tb_autorLivro.Text}, Ano de Publicação: {tb_anoPublicacao.Text};
         }
     }
 }

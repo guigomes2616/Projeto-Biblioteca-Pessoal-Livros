@@ -1,43 +1,38 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Formularios
 {
     public partial class FormListarLivros : Form
-    {  
+    {
         private int usuarioId;
-        private string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
+        private readonly string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
 
         public FormListarLivros(int id_usuario)
         {
-            InitializeComponent(); 
-            this.usuarioId = id_usuario;
+            InitializeComponent();
+            this.usuarioId = id_usuario; // Armazena o ID do usuário passado no momento da inicialização
             CarregarLivros();
+            btn_Voltar.Click += Btn_Voltar_Click;
         }
 
-        private void CarregarLivros()
+        private async void CarregarLivros()
         {
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    connection.Open();
-                    string query = "SELECT nome_livro, autor_livro, ano_publicacao FROM livro WHERE id_usuario = @UsuarioId";
+                    await connection.OpenAsync();
+                    string query = "SELECT nome_livro, autor_livro, ano_publicacao FROM Livro WHERE id_usuario = @UsuarioId";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@UsuarioId", usuarioId);
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                         {
                             DataTable dataTable = new DataTable();
-                            adapter.Fill(dataTable);
+                            await adapter.FillAsync(dataTable);
                             dataGridViewLivros.DataSource = dataTable;
                         }
                     }
@@ -45,8 +40,15 @@ namespace Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao carregar livros: {ex.Message}");
+                MessageBox.Show("Erro ao listar os livros: " + ex.Message);
             }
+        }
+
+        private void Btn_Voltar_Click(object sender, EventArgs e)
+        {
+            var formPrincipal = new FormPrincipal(usuarioId);
+            formPrincipal.Show();
+            Close();
         }
     }
 }

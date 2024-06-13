@@ -1,0 +1,13 @@
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.csproj.AssemblyReference.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.Form1.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.FormularioCadastro.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.FormularioCadastroLivro.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.FormularioListarLivro.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.FormularioListarLivros.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.FormularioPrincipal.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.csproj.GenerateResource.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.AssemblyInfoInputs.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.AssemblyInfo.cs
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.csproj.CoreCompileInputs.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Forms-CadastroLivro\FormularioLogin\obj\Debug\net8.0-windows\FormularioLogin.sourcelink.json

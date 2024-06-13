@@ -79,3 +79,4 @@ C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formu
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formular.9034CDC0.Up2Date
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formularios.exe
 C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\obj\Debug\Formularios.pdb
+C:\Users\guilh\OneDrive\Área de Trabalho\Projeto-DS\Formularios\bin\Debug\Formularios.pdb

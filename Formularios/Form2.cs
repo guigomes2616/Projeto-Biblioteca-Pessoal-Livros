@@ -1,19 +1,17 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Formularios
 {
     public partial class FormCadastro : Form
     {
-        private readonly MySqlConnection connection;
+        private readonly string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
 
         public FormCadastro()
         {
             InitializeComponent();
-            // Usando string de conexão segura para o banco de dados MySQL.
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
         }
 
         private async Task CadastrarUsuarioAsync()
@@ -26,31 +24,33 @@ namespace Formularios
 
             if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(dataNascimento) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(nickname) || string.IsNullOrWhiteSpace(senha))
             {
-                MessageBox.Show("Por favor, preencha todos os campos.");
+                MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                await connection.OpenAsync();
-                string query = "INSERT INTO usuario (nome_usuario, data_nascimento, email_usuario, nick_name, senha) VALUES (@Nome, @DataNascimento, @Email, @Nickname, @Senha)";
-                var command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Nome", nome);
-                command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
-                command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Nickname", nickname);
-                command.Parameters.AddWithValue("@Senha", senha);
-                await command.ExecuteNonQueryAsync();
-                MessageBox.Show("Usuário cadastrado com sucesso!");
-                LimparCampos();
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+                    string query = "INSERT INTO Usuario (nome_usuario, data_nascimento, email_usuario, nick_name, senha) VALUES (@Nome, @DataNascimento, @Email, @Nickname, @Senha)";
+                    using (var command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Nome", nome);
+                        command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Nickname", nickname);
+                        command.Parameters.AddWithValue("@Senha", senha);
+                        await command.ExecuteNonQueryAsync();
+                    }
+
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}");
-            }
-            finally
-            {
-                await connection.CloseAsync();
+                MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -70,14 +70,9 @@ namespace Formularios
 
         private void btn_voltar_Click(object sender, EventArgs e)
         {
-            this.Close();
             var formLogin = new FormLogin();
             formLogin.Show();
-        }
-
-        private void tb_nome_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }
