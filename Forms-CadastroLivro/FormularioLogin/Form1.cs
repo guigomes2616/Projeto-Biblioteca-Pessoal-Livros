@@ -12,7 +12,7 @@ namespace FormularioLogin
         public Form1()
         {
             InitializeComponent();
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            connection = new MySqlConnection("server=192.168.8.10; port=3306; Database=grupo04; uid=grupo04; Pwd='password';");
         }
 
         private async Task<int?> VerificarLoginAsync(string email, string senha)

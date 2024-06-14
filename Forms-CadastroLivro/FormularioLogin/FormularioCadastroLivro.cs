@@ -13,7 +13,7 @@ namespace FormularioLogin
         {
             InitializeComponent();
             this.usuarioId = idUsuario;
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            connection = new MySqlConnection("server=192.168.8.10; port=3306; Database=grupo04; uid=grupo04; Pwd='password';");
 
             btn_Cadastrar.Click += btn_Cadastrar_Click;
             btn_Voltar.Click += btn_Voltar_Click;
@@ -26,11 +26,17 @@ namespace FormularioLogin
             {
                 string nomeLivro = tb_nomeLivro.Text;
                 string autorLivro = tb_autorLivro.Text;
-                int anoPublicacao = Convert.ToInt32(tb_anoPublicacao.Text);
+                int anoPublicacao;
 
                 if (string.IsNullOrEmpty(nomeLivro) || string.IsNullOrEmpty(autorLivro) || string.IsNullOrEmpty(tb_anoPublicacao.Text))
                 {
                     MessageBox.Show("Por favor, preencha todos os campos.");
+                    return;
+                }
+
+                if (!int.TryParse(tb_anoPublicacao.Text, out anoPublicacao))
+                {
+                    MessageBox.Show("O ano de publicação deve ser um número válido.");
                     return;
                 }
 
