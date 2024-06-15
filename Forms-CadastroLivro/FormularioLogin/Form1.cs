@@ -12,7 +12,12 @@ namespace FormularioLogin
         public Form1()
         {
             InitializeComponent();
-            connection = new MySqlConnection("server=192.168.8.10; port=3306; Database=grupo04; uid=grupo04; Pwd='password';");
+            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+
+            // Configurações para não permitir maximização
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = this.Size;
         }
 
         private async Task<int?> VerificarLoginAsync(string email, string senha)
@@ -51,9 +56,10 @@ namespace FormularioLogin
             if (usuarioId.HasValue)
             {
                 MessageBox.Show("Login realizado com sucesso!");
-                this.Hide();
                 var formPrincipal = new FormularioPrincipal(usuarioId.Value);
+                formPrincipal.FormClosed += (s, args) => this.Show(); // Mostra o formulário de login quando o principal é fechado
                 formPrincipal.Show();
+                this.Hide(); // Esconde o formulário atual
             }
             else
             {
@@ -63,9 +69,10 @@ namespace FormularioLogin
 
         private void btn_cadastrarLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var formCadastro = new FormularioCadastro();
+            var formCadastro = new FormularioCadastro(this); // Passa a instância atual do Form1 para o FormularioCadastro
+            formCadastro.FormClosed += (s, args) => this.Show(); // Mostra o formulário de login quando o cadastro é fechado
             formCadastro.Show();
+            this.Hide(); // Esconde o formulário atual
         }
 
         private void label2_Click(object sender, EventArgs e)

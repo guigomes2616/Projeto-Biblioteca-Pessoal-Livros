@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormularioLogin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a491a095477de5983654c811c680cb673992a47")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f7fd0177bc6c453ebdf6e11b933b8c239a1605d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormularioLogin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormularioLogin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

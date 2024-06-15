@@ -32,10 +32,10 @@
             label2 = new Label();
             label3 = new Label();
             tb_nomeLivro = new TextBox();
-            tb_anoPublicacao = new TextBox();
-            tb_autorLivro = new TextBox();
             btn_Voltar = new Button();
             btn_Cadastrar = new Button();
+            tb_autorLivro = new TextBox();
+            tb_anoPublicacao = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -72,20 +72,6 @@
             tb_nomeLivro.Size = new Size(300, 23);
             tb_nomeLivro.TabIndex = 4;
             // 
-            // tb_anoPublicacao
-            // 
-            tb_anoPublicacao.Location = new Point(117, 115);
-            tb_anoPublicacao.Name = "tb_anoPublicacao";
-            tb_anoPublicacao.Size = new Size(303, 23);
-            tb_anoPublicacao.TabIndex = 5;
-            // 
-            // tb_autorLivro
-            // 
-            tb_autorLivro.Location = new Point(137, 179);
-            tb_autorLivro.Name = "tb_autorLivro";
-            tb_autorLivro.Size = new Size(283, 23);
-            tb_autorLivro.TabIndex = 6;
-            // 
             // btn_Voltar
             // 
             btn_Voltar.Location = new Point(243, 277);
@@ -102,20 +88,36 @@
             btn_Cadastrar.Size = new Size(177, 23);
             btn_Cadastrar.TabIndex = 9;
             btn_Cadastrar.Text = "Cadastrar";
-            btn_Cadastrar.UseVisualStyleBackColor = true;            // 
+            btn_Cadastrar.UseVisualStyleBackColor = true;
+            // 
+            // tb_autorLivro
+            // 
+            tb_autorLivro.Location = new Point(120, 118);
+            tb_autorLivro.Name = "tb_autorLivro";
+            tb_autorLivro.Size = new Size(300, 23);
+            tb_autorLivro.TabIndex = 10;
+            // 
+            // tb_anoPublicacao
+            // 
+            tb_anoPublicacao.Location = new Point(140, 179);
+            tb_anoPublicacao.Name = "tb_anoPublicacao";
+            tb_anoPublicacao.Size = new Size(280, 23);
+            tb_anoPublicacao.TabIndex = 11;
+            // 
             // FormularioCadastroLivro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(458, 369);
+            ClientSize = new Size(452, 321);
+            Controls.Add(tb_anoPublicacao);
+            Controls.Add(tb_autorLivro);
             Controls.Add(btn_Cadastrar);
             Controls.Add(btn_Voltar);
-            Controls.Add(tb_autorLivro);
-            Controls.Add(tb_anoPublicacao);
             Controls.Add(tb_nomeLivro);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "FormularioCadastroLivro";
             Text = "FormularioCadastroLivro";
             ResumeLayout(false);
@@ -128,9 +130,9 @@
         private Label label2;
         private Label label3;
         private TextBox tb_nomeLivro;
-        private TextBox tb_anoPublicacao;
-        private TextBox tb_autorLivro;
         private Button btn_Voltar;
         private Button btn_Cadastrar;
+        private TextBox tb_autorLivro;
+        private TextBox tb_anoPublicacao;
     }
 }

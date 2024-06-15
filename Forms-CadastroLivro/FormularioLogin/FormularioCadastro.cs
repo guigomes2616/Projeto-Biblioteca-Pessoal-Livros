@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -7,22 +8,28 @@ namespace FormularioLogin
     public partial class FormularioCadastro : Form
     {
         private readonly string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
+        private readonly Form1 formLogin;
 
-        public FormularioCadastro()
+        public FormularioCadastro(Form1 loginForm)
         {
             InitializeComponent();
+            formLogin = loginForm;
+
+            // Configurações para não permitir maximização
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = this.Size;
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
         {
-            var formLogin = new Form1(); // Renomeie FormularioLogin para Form1
             formLogin.Show();
-            this.Hide();
+            this.Close();
         }
 
         private async void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            await CadastrarUsuarioAsync(); // Utilize async para melhor gerenciamento do método
+            await CadastrarUsuarioAsync();
         }
 
         private void LimparCampos()
@@ -42,7 +49,6 @@ namespace FormularioLogin
             string nickname = tb_nickname.Text;
             string senha = tb_senha.Text;
 
-            // Verifica se todos os campos foram preenchidos
             if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(dataNascimento) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(nickname) || string.IsNullOrWhiteSpace(senha))
             {
                 MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -63,11 +69,11 @@ namespace FormularioLogin
                         command.Parameters.AddWithValue("@Nickname", nickname);
                         command.Parameters.AddWithValue("@Senha", senha);
 
-                        await command.ExecuteNonQueryAsync(); // Executa o comando de inserção
+                        await command.ExecuteNonQueryAsync();
                     }
 
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimparCampos(); // Limpa os campos após o cadastro bem-sucedido
+                    LimparCampos();
                 }
             }
             catch (Exception ex)

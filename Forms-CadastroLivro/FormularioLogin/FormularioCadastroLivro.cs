@@ -13,34 +13,40 @@ namespace FormularioLogin
         {
             InitializeComponent();
             this.usuarioId = idUsuario;
-            connection = new MySqlConnection("server=192.168.8.10; port=3306; Database=grupo04; uid=grupo04; Pwd='password';");
+            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
 
             btn_Cadastrar.Click += btn_Cadastrar_Click;
             btn_Voltar.Click += btn_Voltar_Click;
         }
 
-        // Evento para cadastrar livro
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
             try
             {
-                string nomeLivro = tb_nomeLivro.Text;
-                string autorLivro = tb_autorLivro.Text;
+                string nomeLivro = tb_nomeLivro.Text.Trim();
+                string autorLivro = tb_autorLivro.Text.Trim();
+                string anoPublicacaoTexto = tb_anoPublicacao.Text.Trim();
                 int anoPublicacao;
 
-                if (string.IsNullOrEmpty(nomeLivro) || string.IsNullOrEmpty(autorLivro) || string.IsNullOrEmpty(tb_anoPublicacao.Text))
+                // Mensagens de depuração para ver o valor lido de cada campo
+                MessageBox.Show("Nome do Livro: " + nomeLivro);
+                MessageBox.Show("Autor do Livro: " + autorLivro);
+                MessageBox.Show("Ano de Publicação: " + anoPublicacaoTexto);
+
+                if (string.IsNullOrEmpty(nomeLivro) || string.IsNullOrEmpty(autorLivro) || string.IsNullOrEmpty(anoPublicacaoTexto))
                 {
                     MessageBox.Show("Por favor, preencha todos os campos.");
                     return;
                 }
 
-                if (!int.TryParse(tb_anoPublicacao.Text, out anoPublicacao))
+                if (!int.TryParse(anoPublicacaoTexto, out anoPublicacao))
                 {
                     MessageBox.Show("O ano de publicação deve ser um número válido.");
                     return;
                 }
 
                 connection.Open();
+
                 string query = "INSERT INTO Livro (nome_livro, autor_livro, ano_publicacao, id_usuario) VALUES (@NomeLivro, @AutorLivro, @AnoPublicacao, @UsuarioId)";
                 using (var command = new MySqlCommand(query, connection))
                 {
@@ -76,7 +82,7 @@ namespace FormularioLogin
         {
             var formPrincipal = new FormularioPrincipal(usuarioId); // Passa o ID do usuário ao formulário principal
             formPrincipal.Show();
-            Close(); // Fecha o formulário atual
+            this.Close(); // Fecha o formulário atual
         }
     }
 }

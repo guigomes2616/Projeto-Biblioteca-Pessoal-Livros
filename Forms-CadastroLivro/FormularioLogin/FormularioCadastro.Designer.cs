@@ -89,23 +89,23 @@
             // 
             // tb_nome
             // 
-            tb_nome.Location = new Point(61, 16);
+            tb_nome.Location = new Point(69, 16);
             tb_nome.Name = "tb_nome";
-            tb_nome.Size = new Size(349, 23);
+            tb_nome.Size = new Size(341, 23);
             tb_nome.TabIndex = 5;
             // 
             // tb_dataNascimento
             // 
-            tb_dataNascimento.Location = new Point(128, 63);
+            tb_dataNascimento.Location = new Point(135, 63);
             tb_dataNascimento.Name = "tb_dataNascimento";
-            tb_dataNascimento.Size = new Size(282, 23);
+            tb_dataNascimento.Size = new Size(275, 23);
             tb_dataNascimento.TabIndex = 6;
             // 
             // tb_email
             // 
-            tb_email.Location = new Point(57, 108);
+            tb_email.Location = new Point(69, 108);
             tb_email.Name = "tb_email";
-            tb_email.Size = new Size(353, 23);
+            tb_email.Size = new Size(341, 23);
             tb_email.TabIndex = 7;
             // 
             // tb_nickname
@@ -117,9 +117,9 @@
             // 
             // tb_senha
             // 
-            tb_senha.Location = new Point(57, 205);
+            tb_senha.Location = new Point(69, 205);
             tb_senha.Name = "tb_senha";
-            tb_senha.Size = new Size(353, 23);
+            tb_senha.Size = new Size(341, 23);
             tb_senha.TabIndex = 9;
             // 
             // btn_cadastrar
@@ -159,6 +159,7 @@
             Controls.Add(lab_emailCad);
             Controls.Add(lab_datanasCad);
             Controls.Add(lab_nomeCad);
+            MaximizeBox = false;
             Name = "FormularioCadastro";
             Text = "FormularioCadastro";
             ResumeLayout(false);

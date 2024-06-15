@@ -37,33 +37,30 @@
             // 
             ListaLivro.AllowUserToDeleteRows = false;
             ListaLivro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ListaLivro.Location = new Point(14, 16);
-            ListaLivro.Margin = new Padding(3, 4, 3, 4);
+            ListaLivro.Location = new Point(12, 12);
             ListaLivro.Name = "ListaLivro";
             ListaLivro.ReadOnly = true;
             ListaLivro.RowHeadersWidth = 51;
-            ListaLivro.Size = new Size(525, 265);
+            ListaLivro.Size = new Size(459, 199);
             ListaLivro.TabIndex = 0;
             // 
             // btn_Voltar
             // 
-            btn_Voltar.Location = new Point(229, 307);
-            btn_Voltar.Margin = new Padding(3, 4, 3, 4);
+            btn_Voltar.Location = new Point(200, 230);
             btn_Voltar.Name = "btn_Voltar";
-            btn_Voltar.Size = new Size(86, 31);
+            btn_Voltar.Size = new Size(75, 23);
             btn_Voltar.TabIndex = 1;
             btn_Voltar.Text = "Voltar";
             btn_Voltar.UseVisualStyleBackColor = true;
-            btn_Voltar.Click += btn_Voltar_Click_1;
             // 
             // FormularioListarLivro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(552, 380);
+            ClientSize = new Size(483, 285);
             Controls.Add(btn_Voltar);
             Controls.Add(ListaLivro);
-            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "FormularioListarLivro";
             Text = "FormularioListarLivro";
             ((System.ComponentModel.ISupportInitialize)ListaLivro).EndInit();

@@ -2499,19 +2499,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tecnico\\.nuget\\packages\\": {}
+    "C:\\Users\\guilh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
+      "projectUniqueName": "C:\\Users\\guilh\\OneDrive\\Documentos\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
       "projectName": "FormularioLogin",
-      "projectPath": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
-      "packagesPath": "C:\\Users\\Tecnico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\obj\\",
+      "projectPath": "C:\\Users\\guilh\\OneDrive\\Documentos\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
+      "packagesPath": "C:\\Users\\guilh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\guilh\\OneDrive\\Documentos\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tecnico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

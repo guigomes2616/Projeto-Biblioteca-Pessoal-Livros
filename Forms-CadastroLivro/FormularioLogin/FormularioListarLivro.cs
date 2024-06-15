@@ -8,7 +8,7 @@ namespace FormularioLogin
     public partial class FormularioListarLivro : Form
     {
         private readonly int _usuarioId; // Armazena o ID do usuário
-        private readonly string _connectionString = "server=192.168.8.10; port=3306; Database=grupo04; uid=grupo04; Pwd='password';";
+        private readonly string _connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
 
         public FormularioListarLivro(int idUsuario)
         {
@@ -49,16 +49,12 @@ namespace FormularioLogin
         }
 
         // Evento para voltar à tela principal
-        private void btn_Voltar_Click(object? sender, EventArgs e)
+        private void btn_Voltar_Click(object sender, EventArgs e)
         {
             var formPrincipal = new FormularioPrincipal(_usuarioId); // Passa o ID do usuário ao formulário principal
+            formPrincipal.FormClosed += (s, args) => this.Close(); // Fecha o formulário atual ao fechar o formulário principal
             formPrincipal.Show();
-            Close(); // Fecha o formulário atual
-        }
-
-        private void btn_Voltar_Click_1(object sender, EventArgs e)
-        {
-
+            this.Close(); // Esconde o formulário atual
         }
     }
 }

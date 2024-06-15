@@ -66,9 +66,9 @@
             // 
             tb_senhaLogin.Location = new Point(124, 135);
             tb_senhaLogin.Name = "tb_senhaLogin";
+            tb_senhaLogin.PasswordChar = '*';
             tb_senhaLogin.Size = new Size(284, 23);
             tb_senhaLogin.TabIndex = 3;
-            tb_senhaLogin.PasswordChar = '*'; // Para esconder a senha digitada
             // 
             // label3
             // 
@@ -111,6 +111,7 @@
             Controls.Add(tb_emailLogin);
             Controls.Add(lab_senhaLogin);
             Controls.Add(lab_emailLogin);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Login";
             ResumeLayout(false);
