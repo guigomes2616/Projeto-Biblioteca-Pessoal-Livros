@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jVQq01nbbw8OTRLKW3s8K4Cb087s20MWv2YPfOBcRwak06J3UUdyGqTYqAtpAJaQBJ3T8TvvrldLXpYzMTuOuA==",
+  "dgSpecHash": "yv90zNLvmdM0ajZWNRYwJWBVsRNFyEODmWq+e1+0UlQ7osX5u0tqXYERJJ/8hie33xGgVl/0l3/ORZlAPnr9bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guilh\\OneDrive\\Documentos\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
+  "projectFilePath": "C:\\Users\\guilh\\OneDrive\\Área de Trabalho\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioLogin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guilh\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\guilh\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

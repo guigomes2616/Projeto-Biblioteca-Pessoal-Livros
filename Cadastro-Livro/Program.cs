@@ -1,332 +1,240 @@
-﻿    using System;
-    using System.Collections.Generic;
-using System.Linq;
-    using System.Security.Cryptography.X509Certificates;
-    using System.Text;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using MySql.Data;
-    using MySql.Data.MySqlClient;
+﻿using System;
+using System.Data;
+using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
-    namespace Cadastro_Livro
+namespace ConsoleLogin
+{
+    class Program
     {
-        internal class Program
+        private static readonly MySqlConnection connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04teste; uid=root; Pwd='';");
+        private static int usuarioId;
+
+        static async Task Main(string[] args)
         {
-            static MySqlConnection connection;
-
-        static void Main(string[] args)
+            while (true)
             {
-            connection = GetConnection();
-            connection.Open();
-            RealizarLogin();
+                Console.Clear();
+                Console.WriteLine("----- Bem-vindo ao sistema de login! -----");
+                Console.WriteLine("\nAperte [1] para Entrar");
+                Console.WriteLine("Aperte [2] para Cadastrar");
+                Console.Write("\nEscolha uma opção: ");
+                string escolha = Console.ReadLine();
 
-                string opcaoUsuario = ObterOpcaoUsuario();
-
-                while (opcaoUsuario.ToUpper() != "X")
+                if (escolha == "1")
                 {
-                    switch (opcaoUsuario)
-                    {
-                        case "1":
-                            ListarLivros();
-                            break;
-                        case "2":
-                            CadastrarLivro();
-                            break;
-                    case "X":
-                        SairPrograma();
-                        Environment.Exit(0);
-                        break;
-
-                    default:
-                            Console.Write("\nOpção inválida! tente novamente: \n");
-                            opcaoUsuario = Console.ReadLine();
-                            break;
-                    }
-                    opcaoUsuario = ObterOpcaoUsuario();
+                    await RealizarLogin();
                 }
-                SairPrograma();
-                connection.Close();
-
-                RealizarLogin();
+                else if (escolha == "2")
+                {
+                    await RealizarCadastro();
+                }
+                else
+                {
+                    Console.WriteLine("\nOpção inválida. Tente novamente.");
+                }
             }
-        //----------------------------------------------------------------------------------------------------------------------------------
-        public static void RealizarLogin()
+        }
+
+        private static async Task RealizarLogin()
         {
-            Console.WriteLine("------------ Faça Login para acessar o Programa de Cadastro de Livro ------------\n");
+            Console.Clear();
+            Console.Write("----- Tela de Login -----\n");
+            Console.Write("\nDigite seu email: ");
+            string email = Console.ReadLine();
 
-            Console.Write("Digite [1] para se Cadastrar\n");
-            Console.Write("Digite [2] para Entrar no programa\n");
-            Console.Write("Digite [X] para Sair do programa \n");
+            Console.Write("Digite sua senha: ");
+            string senha = Console.ReadLine();
 
-            Console.Write("\nInsira a opção desejada: ");
-
-            string opcaoLogin = Console.ReadLine().ToUpper();
-
-            switch (opcaoLogin)
+            int? usuarioIdTemp = await VerificarLoginAsync(email, senha);
+            if (usuarioIdTemp.HasValue)
             {
-                case "1":
-                    CadastrarUsuario();
-                    RealizarLogin();
+                Console.WriteLine("\nLogin realizado com sucesso! Aguarde um momento...");
+                usuarioId = usuarioIdTemp.Value;
+                await Task.Delay(2000);  // Espera 2 segundos antes de prosseguir
+                await MostrarTelaPrincipal();
+            }
+            else
+            {
+                Console.WriteLine("\nEmail ou senha incorretos. Tente novamente.");
+                await Task.Delay(5000);  // Espera 5 segundos antes de prosseguir
+            }
+        }
+
+        private static async Task MostrarTelaPrincipal()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("----- Tela Principal: -----");
+                Console.WriteLine("\nAperte [1] para Listar Livros");
+                Console.WriteLine("Aperte [2] para Cadastrar Livro");
+                Console.WriteLine("Aperte [3] para Sair");
+                Console.Write("\nEscolha uma opção: ");
+                string escolha = Console.ReadLine();
+
+                if (escolha == "1")
+                {
+                    await ListarLivros();
+                }
+                else if (escolha == "2")
+                {
+                    await CadastrarLivro();
+                }
+                else if (escolha == "3")
+                {
+                    EncerrarSessao();
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("\nOpção inválida. Tente novamente.");
+                }
+            }
+        }
 
-                case "2":
-                    bool loginSucesso = false;
+        private static async Task ListarLivros()
+        {
+            Console.Clear();
+            try
+            {
+                await connection.OpenAsync();
+                string query = "SELECT nome_livro, autor_livro, ano_publicacao FROM Livro WHERE id_usuario = @UsuarioId";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
 
-                    while (!loginSucesso)
+                    using (var reader = await command.ExecuteReaderAsync())
                     {
-                        if (VerificarLogin() != null)
+                        Console.WriteLine("Lista de Livros:");
+                        if (reader.HasRows)
                         {
-                            loginSucesso = true;
+                            while (await reader.ReadAsync())
+                            {
+                                Console.WriteLine($"Nome: {reader.GetString(0)}, Autor: {reader.GetString(1)}, Ano: {reader.GetInt32(2)}");
+                            }
                         }
                         else
                         {
-                            Console.Write("\nFalha no Login, deseja continuar?(S/N): \n");
-                            string resLogin = Console.ReadLine();
-
-                            if (resLogin.ToUpper() == "S")
-                            {
-                                VerificarLogin();
-                            }
-                            else if (resLogin.ToUpper() == "N")
-                            {
-                                RealizarLogin();
-                            }
+                            Console.WriteLine("Nenhum livro encontrado.");
                         }
                     }
-                    break;
-
-                case "X":
-                    loginSucesso = false;
-                    SairPrograma();
-                    Environment.Exit(0);
-                    break;
-
-                default:
-                    while (opcaoLogin != "X" && opcaoLogin != "1" && opcaoLogin != "2")
-                    {
-                        Console.Write("\nOpcao invalida! tente novamente: ");
-                        opcaoLogin = Console.ReadLine();
-                    }
-                    RealizarLogin();
-                    break;
+                }
             }
-                    connection = GetConnection();
-                    connection.Open();
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao listar livros: {ex.Message}");
+            }
+            finally
+            {
+                await connection.CloseAsync();
+            }
+
+            Console.WriteLine("\nPressione qualquer tecla para voltar à tela principal...");
+            Console.ReadKey();
         }
-    // -------------------------------------------------------------------------------------------------------------------------------
-            public static string ObterOpcaoUsuario()
-            {
-                Console.Write("------------ Menu de Opcoes ------------\n");
 
-                Console.WriteLine("\nDigite [1] para Listar livros");
-                Console.WriteLine("Digite [2] para Inserir novo livro");
-                Console.WriteLine("Digite [X] para Sair");
-                Console.Write("\nInsira a opcao desejada: ");
-
-                Console.WriteLine();
-
-                string opcaoUsuario = Console.ReadLine().ToUpper();
-
-                return opcaoUsuario;
-            }
-
-            public static MySqlConnection GetConnection()
-            {
-                string connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
-                MySqlConnection connection = new MySqlConnection(connectionString);
-                return connection;
-            }
-            // -------------------------------------------------------------------------------------------------------------------------------
-            public static Usuario CadastrarUsuario()
-            {
-                Console.Clear();
-                Console.Write("------------ Cadastro de Usuario ------------\n");
-
-                Console.Write("\nDigite o seu Nome completo: ");
-                string nomeUser = Console.ReadLine();
-
-                Console.Write("\nDigite a sua Data de Nascimento (Formato: dd/mm/aa): ");
-                string datanascimentoUser = Console.ReadLine();
-
-                Console.Write("\nDigite o seu Email: ");
-                string emailUser = Console.ReadLine();
-
-                Console.Write("\nDigite como gostaria de ser Chamado(a): ");
-                string nickUser = Console.ReadLine();
-
-                Console.Write("\nCrie uma Senha: ");
-                string senhaUser = Console.ReadLine();
-
-                Usuario novoUsuario = new Usuario(nomeUser, datanascimentoUser, emailUser, nickUser, senhaUser);    
-
-                using (MySqlConnection connection = GetConnection())
-                {
-                    connection.Open();
-                    string query = "INSERT INTO usuario (nome_usuario, data_nascimento, email_usuario, nick_name, senha) VALUES (@Nome, @DataNascimento, @Email, @Nickname, @Senha)";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Nome", novoUsuario.Nome);
-                    command.Parameters.AddWithValue("@DataNascimento", novoUsuario.DataNascimento);
-                    command.Parameters.AddWithValue("@Email", novoUsuario.useremail);
-                    command.Parameters.AddWithValue("@Nickname", novoUsuario.Nickname);
-                    command.Parameters.AddWithValue("@Senha", novoUsuario.password);
-                    command.ExecuteNonQuery();
-                }
-                return novoUsuario;
-            }
-     //----------------------------------------------------------------------------------------------------------------------------
-            public static void ListarLivros()
-            {
-                Console.WriteLine("---------- Lista de seus Livros ---------- \n");
-
-            using (MySqlConnection connection = GetConnection())
-            {
-                try
-                {
-                    connection.Open();
-                    Console.WriteLine("Conexão aberta com sucesso.");
-
-                    string query = "SELECT * FROM livro";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    MySqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            Console.WriteLine($"Título: {reader.GetString("nome_livro")} | Autor: {reader.GetString("autor_livro")} | Ano de Publicação: {reader.GetInt32("ano_publicacao")} | Gênero: {reader.GetInt32("genero_livro")}");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nenhum livro cadastrado.");
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Erro ao listar os livros: {ex.Message}");
-                }
-
-                Console.WriteLine();
-            }
-        }
-     // --------------------------------------------------------------------------------------------------------------------------------
-            public static Livro CadastrarLivro()
-            {
-                Console.Clear();
-                Console.Write("------------ Cadastrar Livro - Genero ------------\n");
-
-                foreach (int i in Enum.GetValues(typeof(Genero)))
-                {
-                    Console.Write("\n{0} - {1}", i, Enum.GetName(typeof(Genero), i));
-                }
-
-                Console.WriteLine("\n"); // Pula linha
-
-                Console.Write("Digite o Genero do livro entre as opcoes acima: ");
-                int generoLiv = int.Parse(Console.ReadLine());
-
-                while (generoLiv <= 0 || generoLiv > 13)
-                {
-                    Console.Write("\nOperacao invalida, tente novamente!\n");
-
-                    Console.Write("\nDigite o Genero do livro entre as opcoes acima: ");
-                    generoLiv = int.Parse(Console.ReadLine());
-                }
-
-                Console.Write("\n------------ Cadastrar Livro - Informacoes ------------\n");
-
-                Console.Write("\nDigite o Titulo do Livro: ");
-                string titLiv = Console.ReadLine();
-
-                Console.Write("\nDigite o Autor do Livro: ");
-                string autorLiv = Console.ReadLine();
-
-                Console.Write("\nDigite o Ano de lançamento do Livro: ");
-                int anoLiv = Convert.ToInt32(Console.ReadLine());
-
-                int anoAtual = DateTime.Now.Year;
-
-                while (anoLiv > anoAtual)
-                {
-                    Console.Write("\nAno de publicacao invalido, tente novamente! \n");
-
-                    Console.Write("\nDigite o Ano de lançamento do Livro ");
-                    anoLiv = int.Parse(Console.ReadLine());
-                }
-
-                Livro novoLivro = new Livro((Genero)generoLiv, titLiv, autorLiv, anoLiv);
-
-                Console.Write("\n---------- Livro Cadastrado com Sucesso! ---------- \n");
-
-                using (MySqlConnection connection = GetConnection())
-                {
-                    connection.Open();
-                    string query = "INSERT INTO livro (genero_livro, nome_livro, autor_livro, ano_publicacao) VALUES (@Genero, @Titulo, @Autor, @AnoPubli)";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Genero", novoLivro.Genero);
-                    command.Parameters.AddWithValue("@Titulo", novoLivro.Titulo);
-                    command.Parameters.AddWithValue("@Autor", novoLivro.Autor);
-                    command.Parameters.AddWithValue("@AnoPubli", novoLivro.AnoPubli);
-
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        Console.WriteLine("\nLivro cadastrado com sucesso!");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"\nErro ao cadastrar o livro: {ex.Message}");
-                    }
-                }
-                return novoLivro;
-            }
-
-        //---------------------------------------------------------------------------------------------------------------------------------------
-
-        public static Login VerificarLogin() // Método para verificar o login
+        private static async Task CadastrarLivro()
         {
             Console.Clear();
-            Console.Write("------------ Login ------------\n");
+            Console.WriteLine("----- Tela Cadastro de Livros: -----");
+            Console.Write("\nDigite o nome do livro: ");
+            string nome = Console.ReadLine();
 
-            Console.Write("\nDigite o seu Email: ");
-            string emailLogin = Console.ReadLine();
+            Console.Write("Digite o autor do livro: ");
+            string autor = Console.ReadLine();
 
-            Console.Write("Digite a sua Senha: ");
-            string senhaLogin = Console.ReadLine();
+            Console.Write("Digite o ano de publicação: ");
+            if (!int.TryParse(Console.ReadLine(), out int ano))
+            {
+                Console.WriteLine("\nAno inválido. Tente novamente...");
+                await Task.Delay(5000);  // Espera 5 segundos antes de prosseguir
+                return;
+            }
 
             try
             {
-                using (MySqlConnection connection = GetConnection())
+                await connection.OpenAsync();
+                string query = "INSERT INTO Livro (nome_livro, autor_livro, ano_publicacao, id_usuario) VALUES (@Nome, @Autor, @Ano, @UsuarioId)";
+                using (var command = new MySqlCommand(query, connection))
                 {
-                    connection.Open();
-                    string query = "SELECT * FROM usuario WHERE email_usuario = @Email AND senha = @Senha";
-                    MySqlCommand command = new MySqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Email", emailLogin);
-                    command.Parameters.AddWithValue("@Senha", senhaLogin);
+                    command.Parameters.AddWithValue("@Nome", nome);
+                    command.Parameters.AddWithValue("@Autor", autor);
+                    command.Parameters.AddWithValue("@Ano", ano);
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
 
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                    int result = await command.ExecuteNonQueryAsync();
+                    if (result > 0)
                     {
-                        if (reader.Read())
-                        {
-                            // Usuário encontrado
-                            string nomeUsuario = reader.GetString("nome_usuario");
-                            string dataNascimentoStr = reader.GetString("data_nascimento");
-                            DateTime? dataNascimento = null;
-                            string emailUsuario = reader.GetString("email_usuario");
-                            string nickName = reader.GetString("nick_name");
-                            string senhaUsuario = reader.GetString("senha");
-
-                            return new Usuario(nomeUsuario, dataNascimento?.ToString("yyyy-MM-dd"), emailUsuario, nickName, senhaUsuario);
-                        }
-                        else
-                        {
-                            // Usuário não encontrado
-                            Console.WriteLine("Email ou senha incorretos.");
-                            return null;
-                        }
+                        Console.WriteLine("\nLivro cadastrado com sucesso! Aguarde um momento...");
                     }
+                    else
+                    {
+                        Console.WriteLine("Erro ao cadastrar o livro. Tente novamente.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao cadastrar livro: {ex.Message}");
+            }
+            finally
+            {
+                await connection.CloseAsync();
+            }
+
+            await Task.Delay(5000);  // Espera 5 segundos antes de prosseguir
+        }
+
+        private static async Task RealizarCadastro()
+        {
+            while (true)
+            {
+                Console.Clear();
+                Console.Write("----- Tela de Cadastro de Usuario ----- \n");
+                Console.Write("\nDigite seu nome: ");
+                string nome = Console.ReadLine();
+
+                Console.Write("Digite seu email: ");
+                string email = Console.ReadLine();
+
+                Console.Write("Digite seu nick: ");
+                string nick = Console.ReadLine();
+
+                Console.Write("Digite sua senha: ");
+                string senha = Console.ReadLine();
+
+                Console.Write("Digite sua data de nascimento (dd/mm/aaaa): ");
+                string dataNascimento = Console.ReadLine();
+
+                bool sucesso = await CadastrarUsuarioAsync(nome, email, nick, senha, dataNascimento);
+                if (sucesso)
+                {
+                    Console.WriteLine("\nCadastro realizado com sucesso! Aguarde um momento... ");
+                    await Task.Delay(5000);  // Espera 5 segundos antes de prosseguir
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Erro ao cadastrar. Tente novamente...");
+                    await Task.Delay(5000);  // Espera 5 segundos antes de prosseguir
+                }
+            }
+        }
+
+        private static async Task<int?> VerificarLoginAsync(string email, string senha)
+        {
+            try
+            {
+                await connection.OpenAsync();
+                string query = "SELECT id_usuario FROM Usuario WHERE email_usuario = @Email AND senha = @Senha";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Senha", senha);
+
+                    var result = await command.ExecuteScalarAsync();
+                    return result == null ? (int?)null : Convert.ToInt32(result);
                 }
             }
             catch (Exception ex)
@@ -334,14 +242,46 @@ using System.Linq;
                 Console.WriteLine($"Erro ao verificar login: {ex.Message}");
                 return null;
             }
-        }
-
-        public static bool SairPrograma()
+            finally
             {
-                Console.WriteLine("\nObrigado por utilizar o nosso Programa! \nSaindo do programa...\n");
-                Thread.Sleep(3000);
-
-                return false;
+                await connection.CloseAsync();
             }
         }
+
+        private static async Task<bool> CadastrarUsuarioAsync(string nome, string email, string nick, string senha, string dataNascimento)
+        {
+            try
+            {
+                await connection.OpenAsync();
+                string query = "INSERT INTO Usuario (nome_usuario, email_usuario, nick_name, senha, data_nascimento) VALUES (@Nome, @Email, @Nick, @Senha, @DataNascimento)";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nome", nome);
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Nick", nick);
+                    command.Parameters.AddWithValue("@Senha", senha);
+                    command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
+
+                    int result = await command.ExecuteNonQueryAsync();
+                    return result > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao cadastrar usuário: {ex.Message}");
+                return false;
+            }
+            finally
+            {
+                await connection.CloseAsync();
+            }
+        }
+
+        private static void EncerrarSessao()
+        {
+            Console.Clear();
+            Console.WriteLine("Sessão encerrada. Redirecionando para a tela de login...");
+            // Outros procedimentos conforme necessário
+        }
     }
+}
