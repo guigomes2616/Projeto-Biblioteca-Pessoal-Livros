@@ -3,11 +3,11 @@ using System.Data;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace ConsoleLogin
+namespace Cadastro_Livro
 {
     class Program
     {
-        private static readonly MySqlConnection connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04teste; uid=root; Pwd='';");
+        private static readonly MySqlConnection connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
         private static int usuarioId;
 
         static async Task Main(string[] args)
