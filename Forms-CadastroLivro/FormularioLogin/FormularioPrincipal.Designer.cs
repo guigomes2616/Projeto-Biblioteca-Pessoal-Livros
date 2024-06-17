@@ -38,26 +38,29 @@
             // lab_Listar
             // 
             lab_Listar.AutoSize = true;
-            lab_Listar.Location = new Point(117, 102);
+            lab_Listar.Location = new Point(167, 170);
+            lab_Listar.Margin = new Padding(4, 0, 4, 0);
             lab_Listar.Name = "lab_Listar";
-            lab_Listar.Size = new Size(72, 15);
+            lab_Listar.Size = new Size(108, 25);
             lab_Listar.TabIndex = 0;
             lab_Listar.Text = "Listar Livros:";
             // 
             // lab_CadLivro
             // 
             lab_CadLivro.AutoSize = true;
-            lab_CadLivro.Location = new Point(117, 184);
+            lab_CadLivro.Location = new Point(167, 307);
+            lab_CadLivro.Margin = new Padding(4, 0, 4, 0);
             lab_CadLivro.Name = "lab_CadLivro";
-            lab_CadLivro.Size = new Size(89, 15);
+            lab_CadLivro.Size = new Size(134, 25);
             lab_CadLivro.TabIndex = 1;
             lab_CadLivro.Text = "Cadastrar Livro:";
             // 
             // btn_Listar
             // 
-            btn_Listar.Location = new Point(249, 98);
+            btn_Listar.Location = new Point(356, 163);
+            btn_Listar.Margin = new Padding(4, 5, 4, 5);
             btn_Listar.Name = "btn_Listar";
-            btn_Listar.Size = new Size(134, 23);
+            btn_Listar.Size = new Size(191, 38);
             btn_Listar.TabIndex = 2;
             btn_Listar.Text = "Listar";
             btn_Listar.UseVisualStyleBackColor = true;
@@ -65,9 +68,10 @@
             // 
             // btn_CadLivro
             // 
-            btn_CadLivro.Location = new Point(249, 180);
+            btn_CadLivro.Location = new Point(356, 300);
+            btn_CadLivro.Margin = new Padding(4, 5, 4, 5);
             btn_CadLivro.Name = "btn_CadLivro";
-            btn_CadLivro.Size = new Size(134, 23);
+            btn_CadLivro.Size = new Size(191, 38);
             btn_CadLivro.TabIndex = 3;
             btn_CadLivro.Text = "Cadastrar";
             btn_CadLivro.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@
             // 
             // btn_Sair
             // 
-            btn_Sair.Location = new Point(83, 293);
+            btn_Sair.Location = new Point(119, 488);
+            btn_Sair.Margin = new Padding(4, 5, 4, 5);
             btn_Sair.Name = "btn_Sair";
-            btn_Sair.Size = new Size(319, 23);
+            btn_Sair.Size = new Size(456, 38);
             btn_Sair.TabIndex = 4;
             btn_Sair.Text = "Sair do programa";
             btn_Sair.UseVisualStyleBackColor = true;
@@ -85,14 +90,18 @@
             // 
             // FormularioPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 368);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(686, 613);
             Controls.Add(btn_Sair);
             Controls.Add(btn_CadLivro);
             Controls.Add(btn_Listar);
             Controls.Add(lab_CadLivro);
             Controls.Add(lab_Listar);
+            ForeColor = SystemColors.ActiveCaptionText;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "FormularioPrincipal";
             Text = "FormularioPrincipal";
             ResumeLayout(false);

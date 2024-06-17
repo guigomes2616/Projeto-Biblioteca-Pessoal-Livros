@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Cadastro-Livro",
-    "\\Formularios"
+    "\\Forms-CadastroLivro",
+    "\\Forms-CadastroLivro\\FormularioLogin"
   ],
+  "SelectedNode": "\\Forms-CadastroLivro\\FormularioLogin\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

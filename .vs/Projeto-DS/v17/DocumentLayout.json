@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\guilh\\OneDrive\\\u00C1rea de Trabalho\\Projeto-DS\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms-CadastroLivro\\FormularioLogin\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\Form1.cs",
+              "RelativeDocumentMoniker": "Forms-CadastroLivro\\FormularioLogin\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\Form1.cs",
+              "RelativeToolTip": "Forms-CadastroLivro\\FormularioLogin\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T21:47:26.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormularioPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs",
+              "RelativeDocumentMoniker": "Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\Desktop\\Projeto-DS\\Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs",
+              "RelativeToolTip": "Forms-CadastroLivro\\FormularioLogin\\FormularioPrincipal.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T21:47:03.973Z",
+              "EditorCaption": ""
             }
           ]
         }
