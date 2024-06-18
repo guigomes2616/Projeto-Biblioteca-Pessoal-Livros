@@ -8,7 +8,7 @@ namespace FormularioLogin
     public partial class FormularioListarLivro : Form
     {
         private readonly int _usuarioId; // Armazena o ID do usuário
-        private readonly string _connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';";
+        private readonly string _connectionString = "server=localhost; port=3306; Database=grupo04; uid=root; Pwd='123';";
 
         public FormularioListarLivro(int idUsuario)
         {

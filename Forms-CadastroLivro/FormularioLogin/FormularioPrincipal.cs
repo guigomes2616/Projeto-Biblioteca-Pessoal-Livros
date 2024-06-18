@@ -13,7 +13,7 @@ namespace FormularioLogin
         {
             InitializeComponent();
             this.usuarioId = idUsuario; // Inicialize o ID do usuário
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=grupo04; Pwd='';");
+            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=grupo04; Pwd='123';");
 
             // Adicione eventos aos botões no momento da criação do formulário
             btn_Listar.Click += btn_Listar_Click;

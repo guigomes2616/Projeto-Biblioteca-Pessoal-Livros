@@ -13,7 +13,7 @@ namespace FormularioLogin
         {
             InitializeComponent();
             this.usuarioId = idUsuario;
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='123';");
 
             btn_Cadastrar.Click += btn_Cadastrar_Click;
             btn_Voltar.Click += btn_Voltar_Click;

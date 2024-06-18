@@ -12,7 +12,7 @@ namespace FormularioLogin
         public Form1()
         {
             InitializeComponent();
-            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+            connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='123';");
 
             // Configurações para não permitir maximização
             this.FormBorderStyle = FormBorderStyle.FixedSingle;

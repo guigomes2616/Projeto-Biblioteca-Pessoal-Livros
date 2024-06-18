@@ -7,7 +7,7 @@ namespace Cadastro_Livro
 {
     class Program
     {
-        private static readonly MySqlConnection connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='';");
+        private static readonly MySqlConnection connection = new MySqlConnection("server=localhost; port=3306; Database=grupo04; uid=root; Pwd='123';");
         private static int usuarioId;
 
         static async Task Main(string[] args)
