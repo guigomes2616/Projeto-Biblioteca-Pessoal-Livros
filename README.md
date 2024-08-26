@@ -1,8 +1,6 @@
 # Projeto-Biblioteca-Livros
 ## Autores: Guilherme Gomes e Deborah Oliverira
 
-Repositório para o Projeto de Desenvolvimento de Sistemas, formulario de biblioteca pessoal em C#
-
 Biblioteca pessoal para cadastrar e registrar livros e seus respectivos donos. 
 
 Com objetivo de organizar sua biblioteca pessoal, é possível cadastrar:
@@ -11,4 +9,7 @@ Nome do livro;
 Autor do livro;
 Ano de publicação;
 
-No programa é possível visualizar ao selecionar o leitor, todos os livros cadastrados por ele, de maneira prática e rápida.
+### Como usar
+
+1- Baixe o arquivo "bancods1.sql" e crie em seu computador local;
+2- Executa o arquivo (tanto a versão de console como a de Forms) pelo Visual Code Microsoft
